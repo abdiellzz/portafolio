@@ -27,7 +27,7 @@ experiencia, proyectos, educación y certificaciones.
 
 1. **Inicio** — presentación, enfoque profesional y logros destacados.
 2. **Sobre mí** — perfil, datos de contacto y descarga del CV.
-3. **Habilidades** — sistemas y soporte, redes y observabilidad, programación y nube.
+3. **Habilidades** — nueve áreas de especialidad (cloud, datos, virtualización, seguridad, cifrado, amenazas, soporte, red y monitoreo) con iconos SVG propios, más el stack de herramientas.
 4. **Experiencia** — trayectoria en soporte de TI, auditoría y pasantía.
 5. **Proyectos** — ALLEN (IA local) y monitoreo en Kubernetes para la hackatón.
 6. **Formación** — educación, certificaciones y reconocimientos.
