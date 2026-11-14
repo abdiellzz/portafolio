@@ -377,6 +377,8 @@ button { font: inherit; color: inherit; }
   margin-bottom: 1.3rem;
 }
 
+.hero-role span { white-space: nowrap; }
+
 .hero-text {
   max-width: 34rem;
   color: var(--muted);
