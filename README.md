@@ -24,7 +24,7 @@ Interfaz limpia con acentos de terminal, sin decoración innecesaria:
 .
 ├── index.html                 # Página principal (todas las secciones)
 ├── assets/
-│   ├── css/styles.css         # Estilos, terminal y responsive
+│   ├── css/site.css          # Estilos, terminal y responsive
 │   ├── js/main.js             # Menú, scrollspy, progreso, copiar correo y animaciones
 │   ├── fonts/                 # JetBrains Mono e Inter autoalojadas
 │   ├── img/favicon.svg        # Icono del sitio
