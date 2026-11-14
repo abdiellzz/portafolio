@@ -28,10 +28,15 @@ jobs:
         with:
           enablement: true
 
+      - name: Preparar el sitio estático
+        run: |
+          mkdir -p _site
+          rsync -a --exclude '.git' --exclude '.github' --exclude '_site' ./ _site/
+
       - name: Empaquetar el sitio estático
         uses: actions/upload-pages-artifact@v3
         with:
-          path: .
+          path: _site
 
   deploy:
     needs: build
