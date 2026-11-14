@@ -162,7 +162,7 @@
   var copyFeedback = document.getElementById('copy-feedback');
 
   function resetCopy() {
-    if (copyLabel) copyLabel.textContent = 'copiar_correo';
+    if (copyLabel) copyLabel.textContent = 'Copiar correo';
     if (copyFeedback) {
       copyFeedback.textContent = '';
       copyFeedback.classList.remove('is-visible');
@@ -178,9 +178,9 @@
           window.location.href = 'mailto:' + email;
           return;
         }
-        if (copyLabel) copyLabel.textContent = '¡copiado!';
+        if (copyLabel) copyLabel.textContent = '¡Copiado!';
         if (copyFeedback) {
-          copyFeedback.textContent = 'correo copiado: ' + email;
+          copyFeedback.textContent = 'Correo copiado: ' + email;
           copyFeedback.classList.add('is-visible');
         }
         window.setTimeout(resetCopy, 2600);

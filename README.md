@@ -7,14 +7,13 @@ Sitio web personal de una sola página, construido con HTML, CSS y JavaScript pu
 
 ## Dirección de diseño
 
-Estética de terminal / IDE de desarrollo, con una identidad propia:
+Interfaz limpia con acentos de terminal, sin decoración innecesaria:
 
-- Tipografía monoespaciada: **Space Mono** para títulos y **JetBrains Mono** para texto e interfaz.
-- Paleta oscura (`#101319`) con acento **violeta** (`#b07cf7`) y detalles en verde, ámbar y rosa.
-- Componentes tipo **ventana de terminal**: barra con puntos, chip de ruta (`~/perfil — zsh`),
-  sombras duras y bordes de 1 px.
-- Tramas de puntos, etiquetas `#hash`, prefijos `//` y microcopy en español (`sobre_mí`, `cv.pdf`).
-- Iconos SVG propios, nítidos a cualquier tamaño y sin dependencias externas.
+- **JetBrains Mono** para títulos, etiquetas y datos; **Inter** para párrafos.
+- Paleta oscura neutra (`#0c0e12`) con un único acento verde (`#7ee787`) y ámbar solo para premios.
+- Un solo componente de terminal en el hero (`$ whoami`, `cat estado.log`) como firma visual.
+- Secciones numeradas (`01`, `02`, …), tarjetas planas con bordes de 1 px y mucho aire.
+- Sin degradados, sombras, tramas, chips flotantes ni maquetas falsas.
 
 ## Contenido del repositorio
 
@@ -22,9 +21,9 @@ Estética de terminal / IDE de desarrollo, con una identidad propia:
 .
 ├── index.html                 # Página principal (todas las secciones)
 ├── assets/
-│   ├── css/styles.css         # Estilos, componentes de ventana y responsive
+│   ├── css/styles.css         # Estilos, terminal y responsive
 │   ├── js/main.js             # Menú, scrollspy, progreso, copiar correo y animaciones
-│   ├── fonts/                 # Space Mono y JetBrains Mono autoalojadas
+│   ├── fonts/                 # JetBrains Mono e Inter autoalojadas
 │   ├── img/favicon.svg        # Icono del sitio
 │   ├── img/og-image.png       # Imagen de vista previa para redes sociales
 │   └── cv/                    # Currículum en PDF descargable
@@ -35,9 +34,9 @@ Estética de terminal / IDE de desarrollo, con una identidad propia:
 
 ## Secciones
 
-1. **Inicio** — presentación, terminal con el perfil y logros destacados.
+1. **Inicio** — presentación, logros y terminal con el perfil.
 2. **Sobre mí** — perfil, datos de contacto y descarga del CV.
-3. **Habilidades** — 9 áreas de especialidad con iconos SVG + panel de herramientas.
+3. **Habilidades** — 9 áreas de especialidad con iconos SVG + stack de herramientas.
 4. **Experiencia** — Universidad del Istmo, AIESEC y pasantía en Institute College Panamá / CSCYT.
 5. **Proyectos** — ALLEN (IA local, 1.er lugar MIDES) y monitoreo en Kubernetes (Hackatón Copa Airlines).
 6. **Formación** — educación, certificaciones y reconocimientos con estado.
@@ -45,11 +44,11 @@ Estética de terminal / IDE de desarrollo, con una identidad propia:
 
 ## Características técnicas
 
-- Diseño **responsive** (móvil, tableta y escritorio), verificado de 360 px a 1440 px.
+- Diseño **responsive** verificado en 390, 834 y 1440 px, con menú móvil accesible.
 - Accesibilidad: enlace para saltar al contenido, navegación por teclado, `aria-*`,
   foco visible y respeto por `prefers-reduced-motion`.
 - SEO y redes sociales: Open Graph, Twitter Card, datos estructurados JSON-LD y tarjeta 1200×630.
-- Sin dependencias externas: tipografías e iconos se sirven desde el propio sitio.
+- Sin dependencias externas: tipografías e iconos SVG se sirven desde el propio sitio.
 - Estilos de impresión para guardar la página como PDF.
 
 ## Ejecutar en local
