@@ -11,27 +11,6 @@
   var yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = String(new Date().getFullYear());
 
-  /* ---------- Tema claro / oscuro ---------- */
-  var themeToggle = document.getElementById('theme-toggle');
-  var root = document.documentElement;
-
-  function updateThemeLabel() {
-    if (!themeToggle) return;
-    var isDark = root.dataset.theme !== 'light';
-    themeToggle.setAttribute('aria-label', isDark ? 'Cambiar a tema claro' : 'Cambiar a tema oscuro');
-    themeToggle.setAttribute('title', isDark ? 'Cambiar a tema claro' : 'Cambiar a tema oscuro');
-  }
-
-  if (themeToggle) {
-    updateThemeLabel();
-    themeToggle.addEventListener('click', function () {
-      var next = root.dataset.theme === 'light' ? 'dark' : 'light';
-      root.dataset.theme = next;
-      updateThemeLabel();
-      try { localStorage.setItem('tema', next); } catch (e) { /* modo privado */ }
-    });
-  }
-
   /* ---------- Menú móvil ---------- */
   var menuToggle = document.getElementById('menu-toggle');
   var nav = document.getElementById('nav');
@@ -82,7 +61,7 @@
     var scrollTop = window.scrollY || document.documentElement.scrollTop;
     var height = document.documentElement.scrollHeight - window.innerHeight;
 
-    if (header) header.classList.toggle('is-scrolled', scrollTop > 12);
+    if (header) header.classList.toggle('is-scrolled', scrollTop > 10);
     if (progress) progress.style.width = height > 0 ? ((scrollTop / height) * 100).toFixed(2) + '%' : '0%';
     ticking = false;
   }
@@ -150,9 +129,9 @@
       played = true;
       lines.forEach(function (line, index) {
         window.setTimeout(function () {
-          line.style.transition = 'opacity 0.3s ease';
+          line.style.transition = 'opacity 0.28s ease';
           line.style.opacity = '1';
-        }, index * 95);
+        }, index * 90);
       });
     };
 
@@ -164,9 +143,10 @@
             observer.disconnect();
           }
         });
-      }, { threshold: 0.2 });
+      }, { threshold: 0.15 });
       termObserver.observe(terminal);
-      // Respaldo por si el elemento ya es visible sin disparar el observer.
+
+      // Respaldo por si ya es visible sin disparar el observer.
       window.setTimeout(function () {
         var rect = terminal.getBoundingClientRect();
         if (rect.top < window.innerHeight && rect.bottom > 0) play();
@@ -182,7 +162,7 @@
   var copyFeedback = document.getElementById('copy-feedback');
 
   function resetCopy() {
-    if (copyLabel) copyLabel.textContent = 'Copiar correo';
+    if (copyLabel) copyLabel.textContent = 'copiar_correo';
     if (copyFeedback) {
       copyFeedback.textContent = '';
       copyFeedback.classList.remove('is-visible');
@@ -198,9 +178,9 @@
           window.location.href = 'mailto:' + email;
           return;
         }
-        if (copyLabel) copyLabel.textContent = '¡Copiado!';
+        if (copyLabel) copyLabel.textContent = '¡copiado!';
         if (copyFeedback) {
-          copyFeedback.textContent = 'Correo copiado al portapapeles: ' + email;
+          copyFeedback.textContent = 'correo copiado: ' + email;
           copyFeedback.classList.add('is-visible');
         }
         window.setTimeout(resetCopy, 2600);
@@ -209,7 +189,6 @@
       if (navigator.clipboard && window.isSecureContext) {
         navigator.clipboard.writeText(email).then(function () { done(true); }, function () { done(false); });
       } else {
-        // Respaldo para navegadores o contextos sin Clipboard API.
         var temp = document.createElement('textarea');
         temp.value = email;
         temp.setAttribute('readonly', '');

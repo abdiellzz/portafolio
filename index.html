@@ -6,8 +6,7 @@
   <title>Abdiel Camargo — TI, Cloud y Ciberseguridad</title>
   <meta name="description" content="Portafolio digital de Abdiel Camargo: estudiante de Ingeniería en Ciberseguridad con enfoque en la nube, soporte de TI y observabilidad. 4.º lugar en el CTF Nacional de Ciberseguridad.">
   <meta name="author" content="Abdiel Camargo">
-  <meta name="theme-color" content="#070b11" media="(prefers-color-scheme: dark)">
-  <meta name="theme-color" content="#f6f8fb" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#101319">
   <link rel="canonical" href="https://abdiellzz.github.io/portafolio/">
 
   <!-- Open Graph / redes sociales -->
@@ -25,19 +24,12 @@
 
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="assets/img/favicon.svg">
-  <link rel="preload" href="assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/space-mono-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/jetbrains-mono-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="assets/css/styles.css">
 
   <script>
-    // Evita el destello de tema incorrecto antes del primer pintado.
-    (function () {
-      document.documentElement.classList.add('js');
-      try {
-        var saved = localStorage.getItem('tema');
-        var systemLight = window.matchMedia('(prefers-color-scheme: light)').matches;
-        document.documentElement.dataset.theme = saved || (systemLight ? 'light' : 'dark');
-      } catch (e) { /* sin acceso a localStorage */ }
-    })();
+    document.documentElement.classList.add('js');
   </script>
 
   <script type="application/ld+json">
@@ -68,32 +60,28 @@
     <div class="container header-inner">
       <a class="brand" href="#inicio" aria-label="Abdiel Camargo — inicio">
         <span class="brand-mark" aria-hidden="true">AC</span>
-        <span class="brand-text">
-          <strong>Abdiel Camargo</strong>
-          <small>TI · Cloud · Ciberseguridad</small>
+        <span class="brand-id">
+          <span class="brand-name">abdiel<span class="brand-dot">.dev</span></span>
+          <small>ti · cloud · sec</small>
         </span>
       </a>
 
       <nav class="nav" id="nav" aria-label="Navegación principal">
         <ul class="nav-list">
-          <li><a href="#sobre-mi" class="nav-link">Sobre mí</a></li>
-          <li><a href="#habilidades" class="nav-link">Habilidades</a></li>
-          <li><a href="#experiencia" class="nav-link">Experiencia</a></li>
-          <li><a href="#proyectos" class="nav-link">Proyectos</a></li>
-          <li><a href="#certificaciones" class="nav-link">Certificaciones</a></li>
-          <li><a href="#contacto" class="nav-link">Contacto</a></li>
+          <li><a href="#sobre-mi" class="nav-link"><span>01.</span>sobre_mí</a></li>
+          <li><a href="#habilidades" class="nav-link"><span>02.</span>áreas</a></li>
+          <li><a href="#experiencia" class="nav-link"><span>03.</span>experiencia</a></li>
+          <li><a href="#proyectos" class="nav-link"><span>04.</span>proyectos</a></li>
+          <li><a href="#certificaciones" class="nav-link"><span>05.</span>formación</a></li>
+          <li><a href="#contacto" class="nav-link"><span>06.</span>contacto</a></li>
         </ul>
-        <a class="btn btn-primary btn-sm nav-cta" href="assets/cv/Abdiel-Camargo-CV.pdf" download>
+        <a class="btn btn-sm btn-ghost nav-cta" href="assets/cv/Abdiel-Camargo-CV.pdf" download>
+          cv.pdf
           <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3v12m0 0 4.5-4.5M12 15l-4.5-4.5M5 19h14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          Descargar CV
         </a>
       </nav>
 
       <div class="header-actions">
-        <button class="icon-btn theme-toggle" id="theme-toggle" type="button" aria-label="Cambiar a tema claro" title="Cambiar tema">
-          <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.2 5.2l1.4 1.4M17.4 17.4l1.4 1.4M18.8 5.2l-1.4 1.4M6.6 17.4l-1.4 1.4" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
-          <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg>
-        </button>
         <button class="icon-btn menu-toggle" id="menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav">
           <span class="menu-bars" aria-hidden="true"><span></span><span></span><span></span></span>
         </button>
@@ -104,23 +92,19 @@
   <main id="contenido">
     <!-- HERO -->
     <section class="hero" id="inicio">
-      <div class="hero-glow" aria-hidden="true"></div>
-      <div class="hero-grid-bg" aria-hidden="true"></div>
+      <div class="dots dots-a" aria-hidden="true"></div>
+      <div class="dots dots-b" aria-hidden="true"></div>
       <div class="container hero-inner">
         <div class="hero-copy">
-          <p class="status-pill">
+          <p class="status-line">
             <span class="status-dot" aria-hidden="true"></span>
-            Disponible para prácticas y proyectos de TI
+            disponible_para_prácticas y proyectos
           </p>
-          <h1>
-            Hola, soy <span class="gradient-text">Abdiel Camargo</span>
-          </h1>
+          <h1>Abdiel <span class="accent">Camargo</span></h1>
           <p class="hero-role">
-            <span class="role-accent">Soporte de TI</span>
-            <span class="role-sep" aria-hidden="true">/</span>
-            <span>Cloud</span>
-            <span class="role-sep" aria-hidden="true">/</span>
-            <span>Ciberseguridad</span>
+            <span class="prompt" aria-hidden="true">$</span>
+            soporte_ti --cloud --ciberseguridad
+            <span class="caret" aria-hidden="true"></span>
           </p>
           <p class="hero-text">
             Estudiante de Ingeniería en Ciberseguridad con experiencia práctica en soporte de TI
@@ -129,77 +113,79 @@
           </p>
           <div class="hero-actions">
             <a class="btn btn-primary" href="#proyectos">
-              Ver proyectos
+              ver_proyectos
               <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h13m0 0-5-5m5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </a>
             <a class="btn btn-ghost" href="assets/cv/Abdiel-Camargo-CV.pdf" download>
+              descargar_cv.pdf
               <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3v12m0 0 4.5-4.5M12 15l-4.5-4.5M5 19h14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              Descargar CV
             </a>
           </div>
 
-          <dl class="hero-stats">
-            <div class="stat">
-              <dt>CTF Nacional</dt>
-              <dd><strong>4.º</strong> lugar<span class="stat-note">8,385 pts</span></dd>
-            </div>
-            <div class="stat">
-              <dt>Feria MIDES</dt>
-              <dd><strong>1.º</strong> lugar<span class="stat-note">proyecto ALLEN</span></dd>
-            </div>
-            <div class="stat">
-              <dt>Certificaciones</dt>
-              <dd><strong>3</strong> completadas<span class="stat-note">+ AWS en curso</span></dd>
-            </div>
-            <div class="stat">
-              <dt>Inglés</dt>
-              <dd><strong>B1</strong> intermedio<span class="stat-note">EF SET 44/100</span></dd>
-            </div>
-          </dl>
+          <ul class="hero-stats">
+            <li>
+              <span class="stat-k">ctf_nacional</span>
+              <span class="stat-v">4.º lugar</span>
+              <span class="stat-n">8,385 pts</span>
+            </li>
+            <li>
+              <span class="stat-k">feria_mides</span>
+              <span class="stat-v">1.er lugar</span>
+              <span class="stat-n">proyecto ALLEN</span>
+            </li>
+            <li>
+              <span class="stat-k">certificaciones</span>
+              <span class="stat-v">3 + aws</span>
+              <span class="stat-n">en curso</span>
+            </li>
+            <li>
+              <span class="stat-k">inglés</span>
+              <span class="stat-v">B1</span>
+              <span class="stat-n">EF SET 44/100</span>
+            </li>
+          </ul>
         </div>
 
         <div class="hero-visual">
-          <div class="terminal-card reveal" data-reveal>
-            <div class="terminal-bar">
-              <span class="dot red" aria-hidden="true"></span>
-              <span class="dot yellow" aria-hidden="true"></span>
-              <span class="dot green" aria-hidden="true"></span>
-              <span class="terminal-title">abdiel@panama: ~/perfil</span>
+          <div class="win hero-win has-chip reveal" data-reveal>
+            <span class="win-chip">abdiellzz.github.io/portafolio</span>
+            <div class="win-bar">
+              <span class="win-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+              <span class="win-title">~/perfil — zsh</span>
+              <span class="win-state"><i aria-hidden="true"></i>online</span>
             </div>
-            <pre class="terminal-body" id="terminal" aria-label="Resumen del perfil en formato de terminal">
+            <div class="win-body">
+              <pre class="terminal" id="terminal" aria-label="Resumen del perfil en formato de terminal">
 <span class="t-line"><span class="t-prompt">$</span> <span class="t-cmd">whoami</span></span>
-<span class="t-line"><span class="t-out">abdiel_camargo — David, Panamá</span></span>
+<span class="t-line"><span class="t-out">abdiel_camargo</span> <span class="t-dim">// david, panamá</span></span>
 <span class="t-line t-spacer"></span>
 <span class="t-line"><span class="t-prompt">$</span> <span class="t-cmd">cat enfoque.txt</span></span>
-<span class="t-line"><span class="t-out">TI · Cloud · Ciberseguridad</span></span>
+<span class="t-line"><span class="t-accent">ti · cloud · ciberseguridad</span></span>
 <span class="t-line t-spacer"></span>
-<span class="t-line"><span class="t-prompt">$</span> <span class="t-cmd">ls certificaciones/</span></span>
-<span class="t-line"><span class="t-out">aws-academy/  linux-unhatched/  ms-365/  cyber-foundations/</span></span>
+<span class="t-line"><span class="t-prompt">$</span> <span class="t-cmd">ls areas/</span></span>
+<span class="t-line"><span class="t-out">cloud/  datos/  seguridad/  soporte/</span></span>
 <span class="t-line t-spacer"></span>
-<span class="t-line"><span class="t-prompt">$</span> <span class="t-cmd">./estado --actual</span></span>
-<span class="t-line"><span class="t-accent">▸</span> <span class="t-out">Ing. en Ciberseguridad · 3.er trimestre</span></span>
-<span class="t-line"><span class="t-accent">▸</span> <span class="t-out">AWS Academy Cloud Foundations (en curso)</span></span>
-<span class="t-line"><span class="t-accent">▸</span> <span class="t-out">Soporte de TI en Universidad del Istmo</span></span>
+<span class="t-line"><span class="t-prompt">$</span> <span class="t-cmd">./estado --ahora</span></span>
+<span class="t-line"><span class="t-bullet">▸</span> <span class="t-out">ing. ciberseguridad · 3.er trimestre</span></span>
+<span class="t-line"><span class="t-bullet">▸</span> <span class="t-out">aws academy · en curso</span></span>
+<span class="t-line"><span class="t-bullet">▸</span> <span class="t-out">soporte ti @ unistmo</span></span>
 <span class="t-line"><span class="t-prompt">$</span> <span class="cursor" aria-hidden="true"></span></span></pre>
-          </div>
 
-          <div class="orbit-badge" aria-hidden="true">
-            <svg viewBox="0 0 100 100">
-              <defs>
-                <path id="circlePath" d="M50,50 m-37,0 a37,37 0 1,1 74,0 a37,37 0 1,1 -74,0"/>
-              </defs>
-              <text><textPath href="#circlePath">SEGURIDAD · CLOUD · SOPORTE · </textPath></text>
-            </svg>
-            <span class="orbit-center">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 5 6v5.5c0 4.2 2.9 7.7 7 9.5 4.1-1.8 7-5.3 7-9.5V6l-7-3Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="m9 12 2.2 2.2L15.5 10" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </span>
+              <aside class="id-card" aria-label="Tarjeta de perfil">
+                <span class="id-dots" aria-hidden="true"></span>
+                <span class="id-mono" aria-hidden="true">AC</span>
+                <p class="id-handle">@abdiellzz</p>
+                <p class="id-loc">david, panamá</p>
+                <p class="id-role">[ ti · cloud · sec ]</p>
+              </aside>
+            </div>
           </div>
         </div>
       </div>
 
-      <div class="scroll-cue" aria-hidden="true">
-        <span>Desliza para explorar</span>
-        <svg viewBox="0 0 24 24"><path d="M12 5v13m0 0 5-5m-5 5-5-5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <div class="hero-foot container">
+        <span class="hero-scroll">scroll <span aria-hidden="true">↓</span></span>
+        <span class="hero-meta">// portafolio v2026.11</span>
       </div>
     </section>
 
@@ -208,11 +194,11 @@
       <div class="marquee-track">
         <ul class="marquee-group">
           <li>AWS</li><li>Azure</li><li>Kubernetes</li><li>Terraform</li><li>Dynatrace</li><li>DQL</li>
-          <li>Python</li><li>SQL</li><li>Git &amp; GitHub</li><li>Windows</li><li>Linux</li><li>Microsoft 365</li>
+          <li>Python</li><li>SQL</li><li>Git</li><li>Windows</li><li>Linux</li><li>Microsoft 365</li>
         </ul>
         <ul class="marquee-group" aria-hidden="true">
           <li>AWS</li><li>Azure</li><li>Kubernetes</li><li>Terraform</li><li>Dynatrace</li><li>DQL</li>
-          <li>Python</li><li>SQL</li><li>Git &amp; GitHub</li><li>Windows</li><li>Linux</li><li>Microsoft 365</li>
+          <li>Python</li><li>SQL</li><li>Git</li><li>Windows</li><li>Linux</li><li>Microsoft 365</li>
         </ul>
       </div>
     </div>
@@ -220,14 +206,14 @@
     <!-- SOBRE MÍ -->
     <section class="section" id="sobre-mi">
       <div class="container">
-        <div class="section-head reveal" data-reveal>
-          <p class="eyebrow"><span>01</span> Sobre mí</p>
-          <h2>Perfil profesional</h2>
+        <header class="section-head reveal" data-reveal>
+          <p class="eyebrow"><span class="eyebrow-num">01.</span> perfil</p>
+          <h2>sobre <em>mí</em></h2>
           <p class="section-lead">
             Tecnología con propósito: mantener los sistemas funcionando, entender cómo fallan
             y protegerlos antes de que alguien más lo intente.
           </p>
-        </div>
+        </header>
 
         <div class="about-grid">
           <div class="about-text reveal" data-reveal>
@@ -249,62 +235,58 @@
               una herramienta educativa con IA local.
             </p>
 
-            <div class="about-tags" aria-label="Intereses profesionales">
-              <span class="chip">Cloud security</span>
-              <span class="chip">Observabilidad</span>
-              <span class="chip">Automatización</span>
-              <span class="chip">Infraestructura</span>
-            </div>
+            <ul class="about-tags" aria-label="Intereses profesionales">
+              <li>cloud_security</li>
+              <li>observabilidad</li>
+              <li>automatización</li>
+              <li>infraestructura</li>
+            </ul>
           </div>
 
           <aside class="facts-card reveal" data-reveal aria-label="Datos rápidos">
-            <h3>Datos rápidos</h3>
+            <div class="panel-bar">
+              <span class="panel-title">~/datos.txt</span>
+              <span class="panel-mark" aria-hidden="true">···</span>
+            </div>
             <ul class="facts-list">
               <li>
-                <span class="fact-icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24"><path d="M12 21s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11Z" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="10" r="2.6" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
-                </span>
-                <span><small>Ubicación</small><strong>David, Panamá</strong></span>
+                <span class="fact-k">ubicación</span>
+                <span class="fact-v">David, Panamá</span>
               </li>
               <li>
-                <span class="fact-icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="m4 7 8 6 8-6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                </span>
-                <span><small>Correo</small><a href="mailto:camargoabdiel15@gmail.com">camargoabdiel15@gmail.com</a></span>
+                <span class="fact-k">correo</span>
+                <span class="fact-v"><a href="mailto:camargoabdiel15@gmail.com">camargoabdiel15@gmail.com</a></span>
               </li>
               <li>
-                <span class="fact-icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24"><path d="M6.5 4h3l1.5 4-2 1.5a12 12 0 0 0 5.5 5.5L16 13l4 1.5v3a2 2 0 0 1-2.2 2A16 16 0 0 1 4 6.2 2 2 0 0 1 6 4Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
-                </span>
-                <span><small>Teléfono</small><a href="tel:+50767862691">(+507) 6786-2691</a></span>
+                <span class="fact-k">teléfono</span>
+                <span class="fact-v"><a href="tel:+50767862691">(+507) 6786-2691</a></span>
               </li>
               <li>
-                <span class="fact-icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M3.5 12h17M12 3c2.5 2.5 3.8 5.7 3.8 9S14.5 18.5 12 21c-2.5-2.5-3.8-5.7-3.8-9S9.5 5.5 12 3Z" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
-                </span>
-                <span><small>Idiomas</small><strong>Español (nativo) · Inglés B1</strong></span>
+                <span class="fact-k">idiomas</span>
+                <span class="fact-v">Español nativo · Inglés B1</span>
               </li>
               <li>
-                <span class="fact-icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24"><path d="M12 4 2.5 8.5 12 13l9.5-4.5L12 4Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M6 10.5V16c0 1.7 2.7 3 6 3s6-1.3 6-3v-5.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
-                </span>
-                <span><small>Formación</small><strong>Ing. en Ciberseguridad · UNISTMO</strong></span>
+                <span class="fact-k">formación</span>
+                <span class="fact-v">Ing. en Ciberseguridad · UNISTMO</span>
               </li>
             </ul>
-            <a class="btn btn-ghost btn-block" href="assets/cv/Abdiel-Camargo-CV.pdf" download>Descargar CV completo</a>
+            <a class="btn btn-ghost btn-block" href="assets/cv/Abdiel-Camargo-CV.pdf" download>
+              cv_completo.pdf
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3v12m0 0 4.5-4.5M12 15l-4.5-4.5M5 19h14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
           </aside>
         </div>
       </div>
     </section>
 
-    <!-- HABILIDADES -->
+    <!-- ÁREAS -->
     <section class="section section-alt" id="habilidades">
       <div class="container">
-        <div class="section-head reveal" data-reveal>
-          <p class="eyebrow"><span>02</span> Habilidades</p>
-          <h2>Áreas de especialidad</h2>
+        <header class="section-head reveal" data-reveal>
+          <p class="eyebrow"><span class="eyebrow-num">02.</span> capacidades</p>
+          <h2>áreas de <em>especialidad</em></h2>
           <p class="section-lead">Nueve frentes en los que puedo aportar desde el primer día, del soporte al usuario hasta la seguridad en la nube.</p>
-        </div>
+        </header>
 
         <div class="areas-grid">
           <article class="area-card reveal" data-reveal>
@@ -345,7 +327,7 @@
           </article>
           <article class="area-card reveal" data-reveal>
             <span class="area-icon accent-amber" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><rect x="4.6" y="3.4" width="9.6" height="17.2" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M7.3 7.8h4.2M7.3 10.8h2.6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><rect x="12.2" y="12.4" width="7.6" height="6.2" rx="1.6" fill="var(--surface-2)" stroke="currentColor" stroke-width="1.6"/><path d="M14 12.4v-1.5a2.1 2.1 0 0 1 4.2 0v1.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+              <svg viewBox="0 0 24 24"><rect x="3.4" y="3.4" width="8.4" height="17.2" rx="1.8" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M5.7 7.8h3.6M5.7 10.8h2.2" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><rect x="12.4" y="12.6" width="7.4" height="6" rx="1.4" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M14.1 12.6v-1.6a2 2 0 0 1 4 0v1.6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
             </span>
             <div class="area-copy">
               <h3>Cifrado de Datos</h3>
@@ -391,39 +373,39 @@
         </div>
 
         <div class="tools-panel reveal" data-reveal>
-          <div class="tools-head">
-            <h3>Herramientas y tecnologías</h3>
-            <p>El stack con el que trabajo día a día.</p>
+          <div class="panel-bar">
+            <span class="panel-title">~/stack.conf</span>
+            <span class="panel-mark" aria-hidden="true">···</span>
           </div>
           <div class="tools-grid">
             <div class="tool-group">
-              <h4>Sistemas y soporte</h4>
-              <ul class="tag-list"><li>Windows</li><li>Linux</li><li>Hardware</li><li>Microsoft 365</li><li>Soporte técnico</li></ul>
+              <h4>sistemas &amp; soporte</h4>
+              <ul class="tag-list"><li>Windows</li><li>Linux</li><li>hardware</li><li>Microsoft 365</li><li>soporte</li></ul>
             </div>
             <div class="tool-group">
-              <h4>Redes y observabilidad</h4>
-              <ul class="tag-list"><li>Redes</li><li>Dynatrace</li><li>DQL</li><li>Análisis de logs</li><li>Monitoreo</li></ul>
+              <h4>redes &amp; observabilidad</h4>
+              <ul class="tag-list"><li>redes</li><li>Dynatrace</li><li>DQL</li><li>logs</li><li>monitoreo</li></ul>
             </div>
             <div class="tool-group">
-              <h4>Programación y datos</h4>
-              <ul class="tag-list"><li>Python</li><li>SQL</li><li>Git / GitHub</li><li>Automatización</li></ul>
+              <h4>programación &amp; datos</h4>
+              <ul class="tag-list"><li>Python</li><li>SQL</li><li>git</li><li>automatización</li></ul>
             </div>
             <div class="tool-group">
-              <h4>Nube e infraestructura</h4>
+              <h4>nube &amp; infraestructura</h4>
               <ul class="tag-list"><li>AWS</li><li>IAM</li><li>Azure</li><li>Kubernetes</li><li>Terraform</li></ul>
             </div>
           </div>
         </div>
 
         <div class="soft-skills reveal" data-reveal>
-          <h3>Habilidades profesionales</h3>
-          <div class="soft-grid">
-            <div class="soft-item"><span aria-hidden="true">◆</span> Pensamiento analítico</div>
-            <div class="soft-item"><span aria-hidden="true">◆</span> Resolución de problemas</div>
-            <div class="soft-item"><span aria-hidden="true">◆</span> Trabajo en equipo</div>
-            <div class="soft-item"><span aria-hidden="true">◆</span> Comunicación</div>
-            <div class="soft-item"><span aria-hidden="true">◆</span> Adaptabilidad</div>
-          </div>
+          <h3>// habilidades_profesionales</h3>
+          <ul class="soft-grid">
+            <li>pensamiento analítico</li>
+            <li>resolución de problemas</li>
+            <li>trabajo en equipo</li>
+            <li>comunicación</li>
+            <li>adaptabilidad</li>
+          </ul>
         </div>
       </div>
     </section>
@@ -431,11 +413,11 @@
     <!-- EXPERIENCIA -->
     <section class="section" id="experiencia">
       <div class="container">
-        <div class="section-head reveal" data-reveal>
-          <p class="eyebrow"><span>03</span> Trayectoria</p>
-          <h2>Experiencia profesional</h2>
+        <header class="section-head reveal" data-reveal>
+          <p class="eyebrow"><span class="eyebrow-num">03.</span> trayectoria</p>
+          <h2>experiencia <em>profesional</em></h2>
           <p class="section-lead">Soporte real, auditoría y operación: aprendizaje aplicado en entornos con usuarios y plazos.</p>
-        </div>
+        </header>
 
         <ol class="timeline">
           <li class="timeline-item reveal" data-reveal>
@@ -446,7 +428,7 @@
                   <h3>Asistente de Soporte de TI</h3>
                   <p class="timeline-org">Universidad del Istmo</p>
                 </div>
-                <p class="timeline-date"><span class="dot-live" aria-hidden="true"></span>Mayo 2026 — Presente</p>
+                <p class="timeline-date"><span class="dot-live" aria-hidden="true"></span>mayo 2026 — presente</p>
               </div>
               <ul class="bullet-list">
                 <li>Diagnostiqué y resolví problemas de hardware, software y conectividad.</li>
@@ -464,7 +446,7 @@
                   <h3>Gerente de Auditoría</h3>
                   <p class="timeline-org">AIESEC</p>
                 </div>
-                <p class="timeline-date">Ago. 2026 — Ene. 2027</p>
+                <p class="timeline-date">ago. 2026 — ene. 2027</p>
               </div>
               <ul class="bullet-list">
                 <li>Gestioné la documentación requerida por la entidad auditora para el programa de intercambio internacional, manteniendo los expedientes de cada pasante listos para auditoría.</li>
@@ -482,7 +464,7 @@
                   <h3>Pasante de TI</h3>
                   <p class="timeline-org">Institute College Panamá / CSCYT</p>
                 </div>
-                <p class="timeline-date">Oct. — Dic. 2025</p>
+                <p class="timeline-date">oct. — dic. 2025</p>
               </div>
               <ul class="bullet-list">
                 <li>Brindé soporte de redes y asistencia técnica a usuarios y personal administrativo.</li>
@@ -498,76 +480,90 @@
     <!-- PROYECTOS -->
     <section class="section section-alt" id="proyectos">
       <div class="container">
-        <div class="section-head reveal" data-reveal>
-          <p class="eyebrow"><span>04</span> Proyectos</p>
-          <h2>Lo que he construido</h2>
+        <header class="section-head reveal" data-reveal>
+          <p class="eyebrow"><span class="eyebrow-num">04.</span> builds</p>
+          <h2>proyectos <em>destacados</em></h2>
           <p class="section-lead">Proyectos técnicos con impacto medible: de un hackatón en la nube a una herramienta educativa con IA.</p>
-        </div>
+        </header>
 
         <div class="projects-grid">
           <article class="project-card reveal" data-reveal>
-            <div class="project-visual visual-allen" aria-hidden="true">
-              <div class="project-window">
-                <span class="window-bar"></span>
-                <div class="chat-line"><span class="avatar">A</span><span class="bubble">¿Cómo funciona un circuito en serie?</span></div>
-                <div class="chat-line right"><span class="bubble accent">ALLEN · IA local</span></div>
-                <div class="chat-line"><span class="avatar">A</span><span class="bubble">Generando explicación…</span></div>
-                <div class="typing"><i></i><i></i><i></i></div>
-              </div>
+            <div class="win-bar">
+              <span class="win-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+              <span class="win-title">~/proyectos/allen</span>
+              <span class="win-tag">2026</span>
             </div>
-            <div class="project-body">
-              <p class="project-kicker">Herramienta educativa · 2026</p>
-              <h3>ALLEN — Tutor educativo con IA local</h3>
-              <p>
-                Prototipo de herramienta educativa que funciona sin depender de servicios en la nube:
-                modelo de IA local, base de datos ligera y una interfaz web para estudiantes.
-              </p>
-              <ul class="bullet-list compact">
-                <li>Construí y probé el prototipo con usuarios reales.</li>
-                <li>Stack: Python, Ollama, SQLite y JavaScript.</li>
-              </ul>
-              <div class="project-footer">
-                <ul class="tag-list">
-                  <li>Python</li><li>Ollama</li><li>SQLite</li><li>JavaScript</li>
-                </ul>
-                <p class="award-pill">
-                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 4h8v5a4 4 0 0 1-8 0V4Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M16 5h3v2a3 3 0 0 1-3 3M8 5H5v2a3 3 0 0 0 3 3M12 13v4m-3 3h6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                  1.er lugar · Feria MIDES, Boquete
+            <div class="project-inner">
+              <div class="project-visual visual-allen" aria-hidden="true">
+                <div class="project-window">
+                  <span class="window-bar"></span>
+                  <div class="chat-line"><span class="avatar">A</span><span class="bubble">¿Cómo funciona un circuito en serie?</span></div>
+                  <div class="chat-line right"><span class="bubble accent">ALLEN · IA local</span></div>
+                  <div class="chat-line"><span class="avatar">A</span><span class="bubble">Generando explicación…</span></div>
+                  <div class="typing"><i></i><i></i><i></i></div>
+                </div>
+              </div>
+              <div class="project-body">
+                <p class="project-kicker">herramienta educativa · 2026</p>
+                <h3>ALLEN — tutor educativo con IA local</h3>
+                <p>
+                  Prototipo de herramienta educativa que funciona sin depender de servicios en la nube:
+                  modelo de IA local, base de datos ligera y una interfaz web para estudiantes.
                 </p>
+                <ul class="bullet-list compact">
+                  <li>Construí y probé el prototipo con usuarios reales.</li>
+                  <li>Stack: Python, Ollama, SQLite y JavaScript.</li>
+                </ul>
+                <div class="project-footer">
+                  <ul class="tag-list">
+                    <li>Python</li><li>Ollama</li><li>SQLite</li><li>JavaScript</li>
+                  </ul>
+                  <p class="award-pill">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 4h8v5a4 4 0 0 1-8 0V4Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M16 5h3v2a3 3 0 0 1-3 3M8 5H5v2a3 3 0 0 0 3 3M12 13v4m-3 3h6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    1.er lugar · Feria MIDES
+                  </p>
+                </div>
               </div>
             </div>
           </article>
 
           <article class="project-card reveal" data-reveal>
-            <div class="project-visual visual-cloud" aria-hidden="true">
-              <div class="dash">
-                <div class="dash-head">
-                  <span class="dash-title">Observabilidad · Kubernetes</span>
-                  <span class="dash-live"><i></i> live</span>
-                </div>
-                <div class="dash-metrics">
-                  <div class="metric"><small>Servicios</small><strong>12</strong><span class="spark">▁▃▂▅▄▆</span></div>
-                  <div class="metric"><small>Latencia p95</small><strong>148<em>ms</em></strong><span class="spark up">▂▂▃▄▅▆</span></div>
-                  <div class="metric"><small>Errores</small><strong>0.2<em>%</em></strong><span class="spark">▅▄▃▂▁▁</span></div>
-                </div>
-                <div class="dash-query"><span class="q-key">DQL</span> fetch logs | filter status == "error" | summarize count()</div>
-              </div>
+            <div class="win-bar">
+              <span class="win-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+              <span class="win-title">~/proyectos/k8s-observabilidad</span>
+              <span class="win-tag">2026</span>
             </div>
-            <div class="project-body">
-              <p class="project-kicker">Hackatón Copa Airlines · 2026</p>
-              <h3>Monitoreo de servicios en Kubernetes</h3>
-              <p>
-                Solución desplegada en equipo durante la hackatón de Microsoft y Dynatrace, con foco en
-                visibilidad de servicios y análisis de tráfico en clústeres.
-              </p>
-              <ul class="bullet-list compact">
-                <li>Consultas de logs y métricas con Dynatrace y DQL.</li>
-                <li>Despliegue de soluciones en Azure con Terraform y Kubernetes.</li>
-              </ul>
-              <div class="project-footer">
-                <ul class="tag-list">
-                  <li>Dynatrace</li><li>DQL</li><li>Azure</li><li>Kubernetes</li><li>Terraform</li>
+            <div class="project-inner">
+              <div class="project-visual visual-cloud" aria-hidden="true">
+                <div class="dash">
+                  <div class="dash-head">
+                    <span class="dash-title">observabilidad · k8s</span>
+                    <span class="dash-live"><i></i>live</span>
+                  </div>
+                  <div class="dash-metrics">
+                    <div class="metric"><small>servicios</small><strong>12</strong><span class="spark">▁▃▂▅▄▆</span></div>
+                    <div class="metric"><small>p95</small><strong>148<em>ms</em></strong><span class="spark up">▂▂▃▄▅▆</span></div>
+                    <div class="metric"><small>errores</small><strong>0.2<em>%</em></strong><span class="spark">▅▄▃▂▁▁</span></div>
+                  </div>
+                  <div class="dash-query"><span class="q-key">DQL</span> fetch logs | filter status == "error"</div>
+                </div>
+              </div>
+              <div class="project-body">
+                <p class="project-kicker">hackatón copa airlines · 2026</p>
+                <h3>Monitoreo de servicios en Kubernetes</h3>
+                <p>
+                  Solución desplegada en equipo durante la hackatón de Microsoft y Dynatrace, con foco en
+                  visibilidad de servicios y análisis de tráfico en clústeres.
+                </p>
+                <ul class="bullet-list compact">
+                  <li>Consultas de logs y métricas con Dynatrace y DQL.</li>
+                  <li>Despliegue de soluciones en Azure con Terraform y Kubernetes.</li>
                 </ul>
+                <div class="project-footer">
+                  <ul class="tag-list">
+                    <li>Dynatrace</li><li>DQL</li><li>Azure</li><li>Kubernetes</li><li>Terraform</li>
+                  </ul>
+                </div>
               </div>
             </div>
           </article>
@@ -575,14 +571,14 @@
       </div>
     </section>
 
-    <!-- FORMACIÓN Y CERTIFICACIONES -->
+    <!-- FORMACIÓN -->
     <section class="section" id="certificaciones">
       <div class="container">
-        <div class="section-head reveal" data-reveal>
-          <p class="eyebrow"><span>05</span> Formación</p>
-          <h2>Educación y certificaciones</h2>
+        <header class="section-head reveal" data-reveal>
+          <p class="eyebrow"><span class="eyebrow-num">05.</span> formación</p>
+          <h2>educación &amp; <em>certificaciones</em></h2>
           <p class="section-lead">Aprendizaje continuo, con credenciales que respaldan cada área del stack.</p>
-        </div>
+        </header>
 
         <div class="edu-grid">
           <article class="edu-card reveal" data-reveal>
@@ -590,7 +586,7 @@
               <svg viewBox="0 0 24 24"><path d="M12 4 2.5 8.5 12 13l9.5-4.5L12 4Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M6 10.5V16c0 1.7 2.7 3 6 3s6-1.3 6-3v-5.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
             </span>
             <div>
-              <p class="edu-status">En curso</p>
+              <p class="edu-status">[ en curso ]</p>
               <h3>Licenciatura en Ingeniería en Ciberseguridad</h3>
               <p class="edu-org">Universidad del Istmo · 3.er trimestre</p>
             </div>
@@ -601,24 +597,24 @@
               <svg viewBox="0 0 24 24"><path d="m12 3 2.6 5.6 6 .8-4.4 4.2 1.1 6-5.3-3-5.3 3 1.1-6L3.4 9.4l6-.8L12 3Z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
             </span>
             <div>
-              <p class="edu-status">En curso</p>
+              <p class="edu-status">[ en curso ]</p>
               <h3>Diplomado en Inteligencia Artificial, Innovación y Gestión de Proyectos</h3>
-              <p class="edu-org">EUDE Business School · Oct. — Nov. 2026</p>
+              <p class="edu-org">EUDE Business School · oct. — nov. 2026</p>
             </div>
           </article>
         </div>
 
-        <h3 class="subhead reveal" data-reveal>Certificaciones y reconocimientos</h3>
+        <h3 class="subhead reveal" data-reveal>// certificaciones y reconocimientos</h3>
 
         <div class="certs-grid">
           <article class="cert-card reveal" data-reveal>
             <div class="cert-top">
               <span class="cert-logo logo-aws" aria-hidden="true">aws</span>
-              <span class="cert-state in-progress">En curso</span>
+              <span class="cert-state in-progress">en curso</span>
             </div>
             <h3>AWS Academy Cloud Foundations</h3>
             <p class="cert-org">AWS Academy</p>
-            <p class="cert-date">Iniciado en octubre de 2026</p>
+            <p class="cert-date">iniciado oct. 2026</p>
           </article>
 
           <article class="cert-card reveal" data-reveal>
@@ -626,11 +622,11 @@
               <span class="cert-logo logo-ctf" aria-hidden="true">
                 <svg viewBox="0 0 24 24"><path d="M5 4h14v4a4 4 0 0 1-4 4h-2v2.2a4 4 0 1 1-2 0V12H9a4 4 0 0 1-4-4V4Z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M8 18h8" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
               </span>
-              <span class="cert-state highlight">4.º Nacional</span>
+              <span class="cert-state highlight">4.º nacional</span>
             </div>
             <h3>CTF de Ciberseguridad · 8,385 pts</h3>
             <p class="cert-org">Min. de Seguridad Pública / ITSE</p>
-            <p class="cert-date">Octubre de 2026</p>
+            <p class="cert-date">oct. 2026</p>
           </article>
 
           <article class="cert-card reveal" data-reveal>
@@ -641,18 +637,18 @@
               <span class="cert-state highlight">1.er lugar</span>
             </div>
             <h3>Feria de Innovación y Emprendimiento</h3>
-            <p class="cert-org">MIDES · Boquete · Proyecto ALLEN</p>
-            <p class="cert-date">3 de octubre de 2026</p>
+            <p class="cert-org">MIDES · Boquete · proyecto ALLEN</p>
+            <p class="cert-date">3 oct. 2026</p>
           </article>
 
           <article class="cert-card reveal" data-reveal>
             <div class="cert-top">
               <span class="cert-logo logo-cisco" aria-hidden="true">cisco</span>
-              <span class="cert-state done">Completado</span>
+              <span class="cert-state done">completado</span>
             </div>
             <h3>Linux Unhatched</h3>
             <p class="cert-org">Cisco Networking Academy / UTP</p>
-            <p class="cert-date">Septiembre de 2026</p>
+            <p class="cert-date">sep. 2026</p>
           </article>
 
           <article class="cert-card reveal" data-reveal>
@@ -660,77 +656,80 @@
               <span class="cert-logo logo-ms" aria-hidden="true">
                 <span class="ms-grid"><i></i><i></i><i></i><i></i></span>
               </span>
-              <span class="cert-state done">Completado</span>
+              <span class="cert-state done">completado</span>
             </div>
             <h3>Administrador de Microsoft 365</h3>
             <p class="cert-org">Microsoft / Business IT</p>
-            <p class="cert-date">Febrero de 2026</p>
+            <p class="cert-date">feb. 2026</p>
           </article>
 
           <article class="cert-card reveal" data-reveal>
             <div class="cert-top">
               <span class="cert-logo logo-google" aria-hidden="true">Google</span>
-              <span class="cert-state done">Completado</span>
+              <span class="cert-state done">completado</span>
             </div>
             <h3>Cybersecurity Foundations</h3>
             <p class="cert-org">Google</p>
-            <p class="cert-date">Enero de 2026</p>
+            <p class="cert-date">ene. 2026</p>
           </article>
         </div>
       </div>
     </section>
 
     <!-- CONTACTO -->
-    <section class="section section-contact" id="contacto">
+    <section class="section" id="contacto">
       <div class="container">
-        <div class="contact-card reveal" data-reveal>
-          <div class="contact-glow" aria-hidden="true"></div>
-          <div class="contact-copy">
-            <p class="eyebrow"><span>06</span> Contacto</p>
-            <h2>¿Trabajamos juntos?</h2>
-            <p>
-              Estoy abierto a prácticas, posiciones junior de soporte de TI, cloud o ciberseguridad,
-              y a colaborar en proyectos donde pueda aportar orden, monitoreo y automatización.
-            </p>
-            <div class="contact-actions">
-              <a class="btn btn-primary" href="mailto:camargoabdiel15@gmail.com?subject=Contacto%20desde%20el%20portafolio">
-                <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="m4 7 8 6 8-6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                Escríbeme
-              </a>
-              <button class="btn btn-ghost" id="copy-email" type="button" data-email="camargoabdiel15@gmail.com">
-                <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="2" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
-                <span id="copy-label">Copiar correo</span>
-              </button>
-            </div>
-            <p class="copy-feedback" id="copy-feedback" role="status" aria-live="polite"></p>
+        <div class="contact-win win has-chip reveal" data-reveal>
+          <span class="win-chip">~/contacto — bash</span>
+          <div class="win-bar">
+            <span class="win-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+            <span class="win-title">contacto.sh</span>
+            <span class="win-state"><i aria-hidden="true"></i>abierto</span>
           </div>
+          <div class="contact-inner">
+            <div class="contact-copy">
+              <p class="eyebrow"><span class="eyebrow-num">06.</span> contacto</p>
+              <h2>¿trabajamos <em>juntos</em>?</h2>
+              <p>
+                Estoy abierto a prácticas, posiciones junior de soporte de TI, cloud o ciberseguridad,
+                y a colaborar en proyectos donde pueda aportar orden, monitoreo y automatización.
+              </p>
+              <div class="contact-actions">
+                <a class="btn btn-primary" href="mailto:camargoabdiel15@gmail.com?subject=Contacto%20desde%20el%20portafolio">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="m4 7 8 6 8-6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  enviar_correo
+                </a>
+                <button class="btn btn-ghost" id="copy-email" type="button" data-email="camargoabdiel15@gmail.com">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="2" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+                  <span id="copy-label">copiar_correo</span>
+                </button>
+              </div>
+              <p class="copy-feedback" id="copy-feedback" role="status" aria-live="polite"></p>
+            </div>
 
-          <ul class="contact-list">
-            <li>
-              <span class="contact-ico" aria-hidden="true">
-                <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="m4 7 8 6 8-6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              </span>
-              <span><small>Correo electrónico</small><a href="mailto:camargoabdiel15@gmail.com">camargoabdiel15@gmail.com</a></span>
-            </li>
-            <li>
-              <span class="contact-ico" aria-hidden="true">
-                <svg viewBox="0 0 24 24"><path d="M6.5 4h3l1.5 4-2 1.5a12 12 0 0 0 5.5 5.5L16 13l4 1.5v3a2 2 0 0 1-2.2 2A16 16 0 0 1 4 6.2 2 2 0 0 1 6 4Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
-              </span>
-              <span><small>Teléfono / WhatsApp</small><a href="tel:+50767862691">(+507) 6786-2691</a></span>
-            </li>
-            <li>
-              <span class="contact-ico" aria-hidden="true">
-                <svg viewBox="0 0 24 24"><path d="M12 3 5 6v5.5c0 4.2 2.9 7.7 7 9.5 4.1-1.8 7-5.3 7-9.5V6l-7-3Z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
-              </span>
-              <span><small>GitHub</small><a href="https://github.com/abdiellzz" target="_blank" rel="noopener noreferrer">github.com/abdiellzz</a></span>
-            </li>
-            <li>
-              <span class="contact-ico" aria-hidden="true">
-                <svg viewBox="0 0 24 24"><path d="M12 21s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11Z" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="10" r="2.6" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
-              </span>
-              <span><small>Ubicación</small><strong>David, Panamá</strong></span>
-            </li>
-          </ul>
+            <ul class="contact-list">
+              <li>
+                <span class="c-key">email</span>
+                <a href="mailto:camargoabdiel15@gmail.com">camargoabdiel15@gmail.com</a>
+              </li>
+              <li>
+                <span class="c-key">teléfono</span>
+                <a href="tel:+50767862691">(+507) 6786-2691</a>
+              </li>
+              <li>
+                <span class="c-key">github</span>
+                <a href="https://github.com/abdiellzz" target="_blank" rel="noopener noreferrer">github.com/abdiellzz</a>
+              </li>
+              <li>
+                <span class="c-key">ubicación</span>
+                <span>David, Panamá</span>
+              </li>
+              <li>
+                <span class="c-key">respuesta</span>
+                <span>&lt; 24 h</span>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
@@ -738,10 +737,10 @@
 
   <footer class="site-footer">
     <div class="container footer-inner">
-      <p>© <span id="year">2026</span> Abdiel Camargo · Portafolio digital</p>
-      <p class="footer-meta">Diseñado y construido con HTML, CSS y JavaScript</p>
+      <p>© <span id="year">2026</span> abdiel_camargo</p>
+      <p class="footer-meta">// hecho con html, css &amp; js</p>
       <a class="back-top" href="#inicio" aria-label="Volver arriba">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V6m0 0 5 5m-5-5-5 5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span aria-hidden="true">↑</span> inicio
       </a>
     </div>
   </footer>
