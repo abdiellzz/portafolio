@@ -13,7 +13,10 @@ Interfaz limpia con acentos de terminal, sin decoración innecesaria:
 - Paleta oscura neutra (`#0c0e12`) con un único acento verde (`#7ee787`) y ámbar solo para premios.
 - Un solo componente de terminal en el hero (`$ whoami`, `cat estado.log`) como firma visual.
 - Secciones numeradas (`01`, `02`, …), tarjetas planas con bordes de 1 px y mucho aire.
-- Sin degradados, sombras, tramas, chips flotantes ni maquetas falsas.
+- Fondo decorativo de terminal: cuadrícula de celdas, halo de fósforo, franja de barrido,
+  líneas de escaneo y viñeta, todo en una capa fija `aria-hidden` que respeta
+  `prefers-reduced-motion` y desaparece al imprimir.
+- Sin degradados en los componentes, sombras duras, chips flotantes ni maquetas falsas.
 
 ## Contenido del repositorio
 
