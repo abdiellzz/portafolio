@@ -223,23 +223,7 @@ button { font: inherit; color: inherit; }
   align-items: center;
   gap: 0.6rem;
   min-width: 0;
-}
-.brand-mark {
-  display: grid;
-  place-items: center;
-  width: 32px;
-  height: 32px;
-  flex: none;
-  border: 1px solid var(--accent-line);
-  border-radius: 6px;
-  background: var(--accent-dim);
-  color: var(--accent);
-  font-family: var(--mono);
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 0.02em;
-}
-.brand-name {
+}.brand-name {
   font-family: var(--mono);
   font-size: 0.88rem;
   font-weight: 600;
@@ -339,7 +323,7 @@ button { font: inherit; color: inherit; }
 /* ---------- Destacados del hero ---------- */
 .hero-highlights {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 1rem;
   margin-top: clamp(2.2rem, 4.5vw, 3.2rem);
 }
@@ -372,57 +356,6 @@ button { font: inherit; color: inherit; }
 }
 
 .highlight figcaption span { color: var(--muted); }
-
-.highlight-stat .hs-body {
-  aspect-ratio: 16 / 9;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 0.25rem;
-  padding: 1rem 1.1rem;
-  background:
-    radial-gradient(ellipse 90% 120% at 12% 0%, rgba(var(--term-accent-rgb), 0.09), transparent 62%),
-    var(--panel-2);
-}
-
-.hs-kicker {
-  font-family: var(--mono);
-  font-size: 0.64rem;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--accent);
-}
-
-.hs-value {
-  font-family: var(--mono);
-  font-size: clamp(1.35rem, 2.2vw, 1.7rem);
-  letter-spacing: -0.03em;
-  color: var(--text);
-}
-
-.hs-meta {
-  font-family: var(--mono);
-  font-size: 0.68rem;
-  color: var(--dim);
-}
-
-.status {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  margin-bottom: 1.4rem;
-  font-family: var(--mono);
-  font-size: 0.74rem;
-  color: var(--muted);
-}
-.status-dot {
-  width: 6px;
-  height: 6px;
-  flex: none;
-  border-radius: 50%;
-  background: var(--accent);
-}
-
 .prompt-line {
   margin-bottom: 0.6rem;
   font-family: var(--mono);
@@ -975,6 +908,7 @@ button { font: inherit; color: inherit; }
 }
 
 @media (max-width: 900px) {
+  .hero-highlights { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .menu-toggle { display: grid; }
   .nav {
     position: fixed;
