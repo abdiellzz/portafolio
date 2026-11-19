@@ -111,8 +111,8 @@
   onScroll();
 
   /* ---------- Orden y vista previa de certificados ---------- */
-  var certificateGallery = document.querySelector('.cert-gallery');
-  if (certificateGallery) {
+  var certificateGalleries = Array.prototype.slice.call(document.querySelectorAll('.cert-gallery'));
+  certificateGalleries.forEach(function (certificateGallery) {
     var certificateCards = Array.prototype.slice.call(certificateGallery.querySelectorAll('.cert-card'));
     certificateCards.sort(function (first, second) {
       var firstDate = first.getAttribute('data-date') || '';
@@ -123,7 +123,7 @@
       return secondDate.localeCompare(firstDate);
     });
     certificateCards.forEach(function (card) { certificateGallery.appendChild(card); });
-  }
+  });
 
   var certificateModal = document.getElementById('certificate-modal');
   var certificateModalImage = document.getElementById('certificate-modal-image');
