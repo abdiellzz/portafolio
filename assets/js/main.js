@@ -110,6 +110,70 @@
   window.addEventListener('resize', updateActiveNavigation, { passive: true });
   onScroll();
 
+  /* ---------- Orden y vista previa de certificados ---------- */
+  var certificateGallery = document.querySelector('.cert-gallery');
+  if (certificateGallery) {
+    var certificateCards = Array.prototype.slice.call(certificateGallery.querySelectorAll('.cert-card'));
+    certificateCards.sort(function (first, second) {
+      var firstDate = first.getAttribute('data-date') || '';
+      var secondDate = second.getAttribute('data-date') || '';
+      if (!firstDate && !secondDate) return 0;
+      if (!firstDate) return 1;
+      if (!secondDate) return -1;
+      return secondDate.localeCompare(firstDate);
+    });
+    certificateCards.forEach(function (card) { certificateGallery.appendChild(card); });
+  }
+
+  var certificateModal = document.getElementById('certificate-modal');
+  var certificateModalImage = document.getElementById('certificate-modal-image');
+  var certificateModalTitle = document.getElementById('certificate-modal-title');
+  var certificateModalMeta = document.getElementById('certificate-modal-meta');
+  var certificateModalVerify = document.getElementById('certificate-modal-verify');
+  var certificateClose = document.querySelector('[data-certificate-modal-close]');
+  var certificateMedia = Array.prototype.slice.call(document.querySelectorAll('.cert-card-media'));
+
+  function closeCertificateModal() {
+    if (!certificateModal) return;
+    if (typeof certificateModal.close === 'function' && certificateModal.open) {
+      certificateModal.close();
+    } else {
+      certificateModal.removeAttribute('open');
+    }
+  }
+
+  if (certificateModal && certificateModalImage && certificateModalTitle && certificateModalMeta && certificateModalVerify) {
+    certificateMedia.forEach(function (media) {
+      media.addEventListener('click', function (event) {
+        // Se conserva el comportamiento nativo al usar modificadores para abrir otra pestaña.
+        if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey || event.button !== 0) return;
+
+        var image = media.querySelector('img');
+        var card = media.closest('.cert-card');
+        if (!image || !card) return;
+
+        event.preventDefault();
+        certificateModalImage.src = image.getAttribute('src');
+        certificateModalImage.alt = image.getAttribute('alt') || '';
+        certificateModalTitle.textContent = (card.querySelector('h4') || {}).textContent || 'Certificado';
+        certificateModalMeta.textContent = (card.querySelector('.cert-card-meta') || {}).textContent || '';
+
+        var verificationUrl = media.getAttribute('data-verification-url');
+        certificateModalVerify.hidden = !verificationUrl;
+        if (verificationUrl) certificateModalVerify.href = verificationUrl;
+        else certificateModalVerify.removeAttribute('href');
+
+        if (typeof certificateModal.showModal === 'function') certificateModal.showModal();
+        else certificateModal.setAttribute('open', '');
+      });
+    });
+
+    if (certificateClose) certificateClose.addEventListener('click', closeCertificateModal);
+    certificateModal.addEventListener('click', function (event) {
+      if (event.target === certificateModal) closeCertificateModal();
+    });
+  }
+
   /* ---------- Animaciones de entrada ---------- */
   var revealEls = Array.prototype.slice.call(document.querySelectorAll('.reveal'));
 
