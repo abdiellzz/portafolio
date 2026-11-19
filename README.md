@@ -30,6 +30,7 @@ Interfaz limpia con acentos de terminal, sin decoración innecesaria:
 │   ├── fonts/                 # JetBrains Mono e Inter autoalojadas
 │   ├── img/favicon.svg        # Icono del sitio
 │   ├── img/og-image.png       # Imagen de vista previa para redes sociales
+│   ├── img/aws-iam/           # 23 capturas de la guía ilustrada de AWS IAM
 │   └── cv/                    # Currículum en PDF descargable
 ├── .github/workflows/deploy.yml
 ├── .nojekyll                  # Evita el procesamiento con Jekyll en GitHub Pages
@@ -42,7 +43,7 @@ Interfaz limpia con acentos de terminal, sin decoración innecesaria:
 2. **Sobre mí** — perfil, datos de contacto y descarga del CV.
 3. **Habilidades** — 9 áreas de especialidad con iconos SVG + stack de herramientas.
 4. **Experiencia** — Universidad del Istmo, AIESEC y pasantía en Institute College Panamá / CSCYT.
-5. **Proyectos** — página independiente, lista para incorporar proyectos en detalle.
+5. **Proyectos** — guía ilustrada del laboratorio «Introducción a AWS IAM», con 23 capturas y video integrado.
 6. **Formación** — educación, certificaciones y reconocimientos con estado.
 7. **Contacto** — enlaces directos e iconos de correo, GitHub, LinkedIn y teléfono.
 
@@ -52,7 +53,7 @@ Interfaz limpia con acentos de terminal, sin decoración innecesaria:
 - Accesibilidad: enlace para saltar al contenido, navegación por teclado, `aria-*`,
   foco visible y respeto por `prefers-reduced-motion`.
 - SEO y redes sociales: Open Graph, Twitter Card, datos estructurados JSON-LD y tarjeta 1200×630.
-- Sin dependencias externas: tipografías e iconos SVG se sirven desde el propio sitio.
+- Tipografías e iconos SVG autoalojados; el reproductor de YouTube solo se carga en el video del laboratorio.
 - Estilos de impresión para guardar la página como PDF.
 
 ## Ejecutar en local
