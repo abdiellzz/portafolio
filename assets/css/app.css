@@ -721,6 +721,89 @@ button { font: inherit; color: inherit; }
 }
 .project .tags { margin-top: auto; }
 
+/* ---------- Invitación a proyectos ---------- */
+.project-invite {
+  padding-block: clamp(2rem, 4.5vw, 3.5rem);
+  border-block: 1px solid var(--line);
+  background: var(--bg-alt);
+}
+.project-invite-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: clamp(1.5rem, 5vw, 5rem);
+}
+.project-invite-copy { max-width: 42rem; }
+.project-invite-copy .section-label { margin-bottom: 0.65rem; }
+.project-invite-copy h2 {
+  font-family: var(--mono);
+  font-size: clamp(1.55rem, 3.2vw, 2.35rem);
+  font-weight: 600;
+  letter-spacing: -0.05em;
+  line-height: 1.14;
+}
+.project-invite-copy > p:last-child {
+  max-width: 35rem;
+  margin-top: 0.8rem;
+  color: var(--muted);
+  font-size: 0.88rem;
+  line-height: 1.75;
+}
+.project-invite-button {
+  position: relative;
+  display: grid;
+  flex: none;
+  grid-template-columns: 1fr auto;
+  min-width: min(100%, 18rem);
+  padding: 1.15rem 1.25rem;
+  overflow: hidden;
+  border: 1px solid var(--accent);
+  border-radius: var(--radius);
+  background: var(--accent);
+  color: #0b120c;
+  transition: background 0.2s var(--ease), transform 0.2s var(--ease), border-color 0.2s var(--ease);
+}
+.project-invite-button:hover {
+  border-color: #9af0a1;
+  background: #9af0a1;
+  transform: translateY(-3px);
+}
+.project-invite-button-label {
+  grid-column: 1 / -1;
+  margin-bottom: 0.32rem;
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.045em;
+  text-transform: uppercase;
+}
+.project-invite-button strong {
+  align-self: center;
+  font-family: var(--mono);
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+.project-invite-button svg {
+  width: 1.15rem;
+  height: 1.15rem;
+  align-self: center;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.8;
+  transition: transform 0.2s var(--ease);
+}
+.project-invite-button:hover svg { transform: translateX(3px); }
+.project-invite-button small {
+  grid-column: 1 / -1;
+  margin-top: 0.65rem;
+  padding-top: 0.65rem;
+  border-top: 1px solid rgba(11, 18, 12, 0.22);
+  font-family: var(--mono);
+  font-size: 0.6rem;
+  opacity: 0.78;
+}
+
 /* ---------- Formación ---------- */
 .edu-grid {
   display: grid;
@@ -1431,6 +1514,8 @@ button { font: inherit; color: inherit; }
   .guide-flow, .guide-media-grid-two, .guide-media-grid-three, .guide-assignment-grid { grid-template-columns: 1fr; }
   .guide-section-head { margin-bottom: 1.5rem; }
   .guide-hero { padding-top: calc(var(--header-h) + 2.8rem); }
+  .project-invite-inner { align-items: stretch; flex-direction: column; }
+  .project-invite-button { width: 100%; }
   .project-preview-media { min-height: 13rem; }
   .project-preview-content { min-height: 0; }
   .project-preview-includes ul { display: grid; gap: 0.48rem; }
