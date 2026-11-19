@@ -15,7 +15,7 @@
   <link rel="apple-touch-icon" href="assets/img/favicon.svg">
   <link rel="preload" href="assets/fonts/jetbrains-mono-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="assets/css/app.css?v=20261119a">
+  <link rel="stylesheet" href="assets/css/app.css?v=20261119b">
 
   <script>document.documentElement.classList.add('js');</script>
 </head>
@@ -358,20 +358,21 @@
           <p>Inicia sesión como <code>user-3</code>, verifica la región, selecciona únicamente <strong>LabHost</strong> y repite <strong>Instance state → Stop instance → Stop</strong>.</p>
         </header>
 
-        <div class="guide-media-grid guide-media-grid-three">
+        <div class="guide-media-grid guide-media-grid-two guide-user3-results">
           <figure class="guide-figure reveal" data-reveal>
             <img src="assets/img/aws-iam/iam-20.png" alt="Confirmación de detener LabHost con la sesión de user-3" loading="lazy">
             <figcaption>Figura 20. Confirmación de detención con user-3.</figcaption>
-          </figure>
-          <figure class="guide-figure reveal" data-reveal>
-            <img src="assets/img/aws-iam/iam-21.png" alt="Confirmación de AWS de que se inició la solicitud de detención" loading="lazy">
-            <figcaption>Figura 21. AWS acepta la solicitud de detención.</figcaption>
           </figure>
           <figure class="guide-figure reveal" data-reveal>
             <img src="assets/img/aws-iam/iam-22.png" alt="Estado de la instancia LabHost en Stopping" loading="lazy">
             <figcaption>Figura 22. La instancia queda en <code>Stopping</code>, no en <code>Stopped</code> verificado.</figcaption>
           </figure>
         </div>
+
+        <figure class="guide-figure guide-figure-21 reveal" data-reveal>
+          <img src="assets/img/aws-iam/iam-21.png" alt="Confirmación de AWS de que se inició la solicitud de detención" loading="lazy">
+          <figcaption>Figura 21. AWS acepta la solicitud de detención.</figcaption>
+        </figure>
 
         <div class="guide-callout reveal" data-reveal>
           <p class="guide-callout-label">Resultado observado</p>

@@ -1035,6 +1035,14 @@ button { font: inherit; color: inherit; }
 .guide-figure figcaption code { color: var(--accent); }
 .guide-figure-hero { box-shadow: 0 18px 50px rgba(0, 0, 0, 0.22); }
 .guide-figure-wide { max-width: 51rem; }
+.guide-figure-21 {
+  width: 100%;
+  margin-top: clamp(1.2rem, 2.5vw, 1.8rem);
+}
+.guide-figure-21 img {
+  width: 100%;
+  image-rendering: auto;
+}
 .guide-callout {
   max-width: 55rem;
   margin-top: 1.5rem;
