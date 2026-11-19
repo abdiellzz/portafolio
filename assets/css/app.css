@@ -30,21 +30,21 @@
   --sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
   --mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
 
-  --bg: #0b0d11;
-  --bg-alt: rgba(9, 11, 14, 0.55);
-  --panel: rgba(17, 21, 27, 0.9);
-  --panel-2: rgba(21, 26, 33, 0.92);
-  --term-accent-rgb: 126, 231, 135;
-  --line: #232a34;
-  --line-2: #323b48;
+  --bg: #0d1015;
+  --bg-alt: rgba(14, 18, 23, 0.72);
+  --panel: rgba(18, 22, 28, 0.82);
+  --panel-2: rgba(24, 29, 36, 0.88);
+  --term-accent-rgb: 130, 217, 138;
+  --line: #202731;
+  --line-2: #2c3541;
 
   --text: #e6e9ef;
   --muted: #98a2b0;
   --dim: #6b7684;
 
-  --accent: #7ee787;
-  --accent-dim: rgba(126, 231, 135, 0.1);
-  --accent-line: rgba(126, 231, 135, 0.32);
+  --accent: #82d98a;
+  --accent-dim: rgba(130, 217, 138, 0.065);
+  --accent-line: rgba(130, 217, 138, 0.22);
   --amber: #f0c674;
 
   --radius: 8px;
@@ -89,48 +89,38 @@ body {
 
 .term-glow {
   background: radial-gradient(
-    ellipse 70% 55% at 50% 32%,
-    rgba(var(--term-accent-rgb), 0.1) 0%,
-    rgba(var(--term-accent-rgb), 0.035) 45%,
+    ellipse 70% 55% at 50% 24%,
+    rgba(var(--term-accent-rgb), 0.045) 0%,
+    rgba(var(--term-accent-rgb), 0.012) 45%,
     transparent 75%
   );
 }
 
 .term-grid {
   background-image:
-    linear-gradient(to right, rgba(var(--term-accent-rgb), 0.05) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(var(--term-accent-rgb), 0.05) 1px, transparent 1px);
-  background-size: 12px 24px;
+    linear-gradient(to right, rgba(var(--term-accent-rgb), 0.018) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(var(--term-accent-rgb), 0.018) 1px, transparent 1px);
+  background-size: 18px 30px;
 }
 
-.term-scanband {
-  height: 220px;
-  inset: 0 0 auto 0;
-  background: linear-gradient(
-    180deg,
-    transparent 0%,
-    rgba(var(--term-accent-rgb), 0.035) 50%,
-    transparent 100%
-  );
-  animation: term-scan 14s linear infinite;
-}
+.term-scanband { display: none; }
 
 .term-scanlines {
   background: repeating-linear-gradient(
     0deg,
-    rgba(0, 0, 0, 0.28) 0px,
-    rgba(0, 0, 0, 0.28) 1px,
+    rgba(0, 0, 0, 0.12) 0px,
+    rgba(0, 0, 0, 0.12) 1px,
     transparent 1px,
-    transparent 3px
+    transparent 4px
   );
-  opacity: 0.6;
+  opacity: 0.18;
 }
 
 .term-vignette {
   background: radial-gradient(
     ellipse 90% 85% at 50% 45%,
-    transparent 42%,
-    rgba(0, 0, 0, 0.55) 100%
+    transparent 48%,
+    rgba(0, 0, 0, 0.28) 100%
   );
 }
 
@@ -324,16 +314,16 @@ button { font: inherit; color: inherit; }
 .hero-highlights {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 1rem;
+  gap: 0.75rem;
   margin-top: clamp(2.2rem, 4.5vw, 3.2rem);
 }
 
 .highlight {
   margin: 0;
   border: 1px solid var(--line);
-  border-radius: var(--radius);
+  border-radius: 6px;
   overflow: hidden;
-  background: var(--panel);
+  background: rgba(18, 22, 28, 0.72);
 }
 
 .highlight img {
@@ -870,76 +860,77 @@ button { font: inherit; color: inherit; }
 
 .cert-gallery {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.8rem;
 }
 .cert-card {
   display: flex;
   flex-direction: column;
   overflow: hidden;
   border: 1px solid var(--line);
-  border-radius: var(--radius);
-  background: var(--panel);
-  transition: border-color 0.2s var(--ease), transform 0.2s var(--ease);
+  border-radius: 6px;
+  background: rgba(18, 22, 28, 0.72);
+  transition: border-color 0.2s var(--ease), background 0.2s var(--ease);
 }
-.cert-card:hover { border-color: var(--accent-line); transform: translateY(-2px); }
+.cert-card:hover { border-color: var(--line-2); background: var(--panel); }
 .cert-card-media {
   position: relative;
   display: grid;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 16 / 10;
   overflow: hidden;
   place-items: center;
-  background: #eef1f1;
+  background: #e8ece9;
   border-bottom: 1px solid var(--line);
 }
 .cert-card-media img {
   width: 100%;
   height: 100%;
   object-fit: contain;
-  transition: transform 0.35s var(--ease);
+  transition: opacity 0.2s var(--ease);
 }
-.cert-card:hover .cert-card-media img { transform: scale(1.018); }
+.cert-card:hover .cert-card-media img { opacity: 0.94; }
 .cert-card-open {
   position: absolute;
-  right: 0.65rem;
-  bottom: 0.65rem;
-  padding: 0.28rem 0.5rem;
-  border: 1px solid rgba(126, 231, 135, 0.5);
-  border-radius: 4px;
-  background: rgba(11, 13, 17, 0.86);
+  right: 0.5rem;
+  bottom: 0.5rem;
+  padding: 0.22rem 0.42rem;
+  border: 1px solid rgba(130, 217, 138, 0.36);
+  border-radius: 3px;
+  background: rgba(11, 13, 17, 0.8);
   color: var(--accent);
   font-family: var(--mono);
-  font-size: 0.61rem;
+  font-size: 0.57rem;
   line-height: 1.35;
-  opacity: 0.92;
+  opacity: 0.8;
   transition: opacity 0.2s var(--ease), background 0.2s var(--ease);
 }
 .cert-card-media:hover .cert-card-open,
 .cert-card-media:focus-visible .cert-card-open { opacity: 1; background: #0b0d11; }
-.cert-card-body { padding: 1rem 1.05rem 1.1rem; }
+.cert-card-body { padding: 0.72rem 0.8rem 0.8rem; }
 .cert-card-provider {
-  margin-bottom: 0.28rem;
+  margin-bottom: 0.2rem;
   color: var(--accent);
   font-family: var(--mono);
-  font-size: 0.65rem;
-  letter-spacing: 0.02em;
+  font-size: 0.57rem;
+  letter-spacing: 0.025em;
   text-transform: uppercase;
 }
 .cert-card h4 {
   font-family: var(--mono);
-  font-size: 0.88rem;
+  font-size: 0.76rem;
   font-weight: 500;
-  line-height: 1.48;
+  line-height: 1.45;
 }
 .cert-card-meta {
-  margin-top: 0.42rem;
+  margin-top: 0.32rem;
   color: var(--dim);
   font-family: var(--mono);
-  font-size: 0.68rem;
+  font-size: 0.61rem;
+  line-height: 1.55;
 }
 .cert-card-media--portrait {
-  aspect-ratio: 1 / 1;
-  background: radial-gradient(circle at 50% 44%, rgba(126, 231, 135, 0.16), #101722 68%);
+  aspect-ratio: 4 / 5;
+  background: #111720;
 }
 .cert-card-media--portrait img { object-position: center; }
 
@@ -1661,6 +1652,7 @@ button { font: inherit; color: inherit; }
   .stack-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .projects-grid { grid-template-columns: 1fr; }
   .edu-grid { grid-template-columns: 1fr; }
+  .cert-gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .guide-hero-grid, .guide-split { grid-template-columns: 1fr; }
   .guide-figure-hero { max-width: 44rem; }
   .guide-media-grid-three { grid-template-columns: repeat(2, minmax(0, 1fr)); }
