@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'sha256-/x7W7R75k8Roq0WaVRQX9blP4OufE5xbAdzklGxsgpw='; style-src 'self'; img-src 'self'; font-src 'self'; frame-src https://www.youtube.com https://www.youtube-nocookie.com; connect-src 'none'; base-uri 'none'; form-action 'none'; object-src 'none'">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'sha256-/x7W7R75k8Roq0WaVRQX9blP4OufE5xbAdzklGxsgpw='; style-src 'self'; img-src 'self'; font-src 'self'; connect-src 'none'; base-uri 'none'; form-action 'none'; object-src 'none'">
   <meta name="referrer" content="strict-origin-when-cross-origin">
-  <title>Introducción a AWS IAM — Abdiel Camargo</title>
-  <meta name="description" content="Guía ilustrada del laboratorio Introducción a AWS IAM: usuarios, grupos, políticas y pruebas de acceso.">
+  <title>Proyectos — Abdiel Camargo</title>
+  <meta name="description" content="Proyectos técnicos de Abdiel Camargo en ciberseguridad, cloud e inteligencia artificial.">
   <meta name="author" content="Abdiel Camargo">
   <meta name="theme-color" content="#0c0e12">
   <link rel="canonical" href="https://abdiellzz.github.io/portafolio/proyectos.html">
@@ -15,11 +15,11 @@
   <link rel="apple-touch-icon" href="assets/img/favicon.svg">
   <link rel="preload" href="assets/fonts/jetbrains-mono-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="assets/css/app.css?v=20261119c">
+  <link rel="stylesheet" href="assets/css/app.css?v=20261119e">
 
   <script>document.documentElement.classList.add('js');</script>
 </head>
-<body class="aws-project-page">
+<body class="projects-page">
   <div class="term-bg" aria-hidden="true">
     <div class="term-glow"></div>
     <div class="term-grid"></div>
@@ -56,395 +56,52 @@
   </header>
 
   <main id="contenido">
-    <section class="guide-hero" aria-labelledby="project-title">
-      <div class="container guide-hero-grid">
-        <div class="guide-hero-copy reveal" data-reveal>
-          <p class="prompt-line"><span class="prompt" aria-hidden="true">$</span> cat laboratorio-01.md</p>
-          <p class="section-label"><span>PROYECTO</span> Laboratorio 01 · Guía ilustrada</p>
-          <h1 id="project-title">Introducción a<br><span>AWS IAM</span></h1>
-          <p class="guide-hero-subtitle">Usuarios, grupos, políticas y pruebas de acceso.</p>
-          <p class="guide-hero-text">Una guía en español para repetir la práctica y entender por qué AWS permite o deniega cada operación.</p>
-          <div class="guide-tags" aria-label="Temas del proyecto">
-            <span>AWS IAM</span><span>Mínimo privilegio</span><span>EC2</span><span>Amazon S3</span>
-          </div>
-        </div>
-
-        <figure class="guide-figure guide-figure-hero reveal" data-reveal>
-          <img src="assets/img/aws-iam/iam-01.png" alt="Esquema de una cuenta AWS con usuarios y los grupos S3-Support, EC2-Support y EC2-Admin" width="900" height="506" fetchpriority="high">
-          <figcaption>1. Esquema de la cuenta, los usuarios y los tres grupos del laboratorio.</figcaption>
-        </figure>
+    <section class="projects-catalog-hero" aria-labelledby="projects-title">
+      <div class="container reveal" data-reveal>
+        <p class="prompt-line"><span class="prompt" aria-hidden="true">$</span> ls proyectos/</p>
+        <p class="section-label"><span>ARCHIVO</span> Trabajo seleccionado</p>
+        <h1 id="projects-title">Proyectos</h1>
+        <p>Laboratorios, soluciones técnicas y experimentos donde documento el proceso, las decisiones y los resultados.</p>
       </div>
     </section>
 
-    <section class="guide-section" aria-labelledby="overview-title">
+    <section class="projects-catalog" aria-label="Listado de proyectos">
       <div class="container">
-        <header class="guide-section-head reveal" data-reveal>
-          <p class="section-label"><span>01</span> Panorama</p>
-          <h2 id="overview-title">La práctica en un vistazo</h2>
-          <p>El objetivo es aplicar el principio de mínimo privilegio: conceder solo los permisos necesarios para cada función.</p>
-        </header>
+        <article class="project-preview reveal" data-reveal>
+          <a class="project-preview-link" href="aws-iam.html" aria-label="Abrir proyecto Introducción a AWS IAM">
+            <div class="project-preview-media">
+              <img src="assets/img/aws-iam/iam-01.png" alt="Esquema de usuarios y grupos del proyecto Introducción a AWS IAM" width="2200" height="1100" loading="lazy">
+              <span class="project-preview-index">01</span>
+            </div>
 
-        <div class="guide-flow reveal" data-reveal>
-          <article><span>01</span><h3>Identificar</h3><p>Reconocer usuarios, grupos y políticas.</p></article>
-          <article><span>02</span><h3>Configurar</h3><p>Asignar cada usuario al grupo correcto.</p></article>
-          <article><span>03</span><h3>Comprobar</h3><p>Comparar lectura, rechazo y una solicitud autorizada.</p></article>
-        </div>
+            <div class="project-preview-content">
+              <p class="section-label"><span>AWS</span> IAM · Laboratorio</p>
+              <h2>Introducción a<br><span>AWS IAM</span></h2>
+              <p class="project-preview-subtitle">Usuarios, grupos, políticas y pruebas de acceso.</p>
+              <p class="project-preview-text">Un recorrido práctico para aplicar mínimo privilegio y comparar qué puede hacer cada identidad dentro del laboratorio.</p>
 
-        <div class="guide-table-wrap reveal" data-reveal>
-          <table class="guide-table">
-            <caption>Asignación objetivo del laboratorio</caption>
-            <thead><tr><th scope="col">Usuario</th><th scope="col">Grupo</th><th scope="col">Acceso previsto</th></tr></thead>
-            <tbody>
-              <tr><td>user-1</td><td>S3-Support</td><td>Consultar Amazon S3.</td></tr>
-              <tr><td>user-2</td><td>EC2-Support</td><td>Consultar instancias de Amazon EC2.</td></tr>
-              <tr><td>user-3</td><td>EC2-Admin</td><td>Consultar, iniciar y detener EC2 según la política del laboratorio.</td></tr>
-            </tbody>
-          </table>
-        </div>
+              <div class="project-preview-includes">
+                <p>Incluye</p>
+                <ul aria-label="Contenido del proyecto">
+                  <li>
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10-6.5-10-6.5Z"/></svg>
+                    Video guía
+                  </li>
+                  <li>
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4.5" width="17" height="15" rx="2"/><circle cx="8.5" cy="9" r="1.4"/><path d="m5.5 17 4.2-4.2 3 2.8 2.1-2 3.7 3.4"/></svg>
+                    23 imágenes
+                  </li>
+                  <li>
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h8l4 4V20.5H6z"/><path d="M14 3.5v4h4M8.8 12h6.4M8.8 15.5h6.4"/></svg>
+                    Documentación
+                  </li>
+                </ul>
+              </div>
 
-        <div class="guide-callout reveal" data-reveal>
-          <p class="guide-callout-label">Cómo interpretar la evidencia</p>
-          <p><strong>Observado</strong> significa que la grabación permite comprobar el resultado descrito. <strong>Esperado / por verificar</strong> indica el comportamiento previsto por la guía o la política, pero no una prueba capturada.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="guide-section guide-section-alt" aria-labelledby="prepare-title">
-      <div class="container">
-        <header class="guide-section-head reveal" data-reveal>
-          <p class="section-label"><span>02</span> Preparación</p>
-          <h2 id="prepare-title">Entrar al laboratorio y localizar IAM</h2>
-          <p>Inicia el entorno desde AWS Academy, abre la consola del laboratorio y busca <strong>IAM</strong>. Entra en Identity and Access Management, sin confundirlo con IAM Identity Center.</p>
-        </header>
-
-        <ol class="guide-steps reveal" data-reveal>
-          <li>Abre el laboratorio, pulsa <strong>Start Lab</strong> y espera a que el entorno esté disponible.</li>
-          <li>En la consola del laboratorio, busca IAM. Conserva la guía del curso para consultar únicamente las credenciales temporales necesarias.</li>
-          <li>En <strong>Users / Usuarios</strong>, identifica <code>user-1</code>, <code>user-2</code> y <code>user-3</code>.</li>
-        </ol>
-
-        <div class="guide-media-grid guide-media-grid-two">
-          <figure class="guide-figure reveal" data-reveal>
-            <img src="assets/img/aws-iam/iam-02.png" alt="Búsqueda de IAM en la consola de AWS" loading="lazy">
-            <figcaption>2. Búsqueda de IAM en la consola de AWS.</figcaption>
-          </figure>
-          <figure class="guide-figure reveal" data-reveal>
-            <img src="assets/img/aws-iam/iam-03.png" alt="Listado inicial de usuarios de IAM" loading="lazy">
-            <figcaption>3. Listado inicial de usuarios de IAM.</figcaption>
-          </figure>
-        </div>
-
-        <div class="guide-callout guide-callout-warning reveal" data-reveal>
-          <p class="guide-callout-label">Entorno autorizado</p>
-          <p>Trabaja únicamente en el laboratorio. Los usuarios, grupos y recursos ya están preparados; no los recrees ni modifiques el usuario administrativo de la sesión.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="guide-section" aria-labelledby="groups-title">
-      <div class="container">
-        <header class="guide-section-head reveal" data-reveal>
-          <p class="section-label"><span>03</span> Reconocimiento</p>
-          <h2 id="groups-title">Comprobar usuarios y grupos</h2>
-          <p>Revisa <code>user-1</code> en <strong>Permissions</strong> y <strong>Groups</strong>. Después localiza los grupos <code>EC2-Admin</code>, <code>EC2-Support</code> y <code>S3-Support</code>, sin añadir usuarios todavía.</p>
-        </header>
-
-        <div class="guide-media-grid guide-media-grid-two">
-          <figure class="guide-figure reveal" data-reveal>
-            <img src="assets/img/aws-iam/iam-04.png" alt="Detalle inicial de user-1 sin políticas de permisos" loading="lazy">
-            <figcaption>4. user-1 no tiene políticas asignadas al inicio del ejercicio.</figcaption>
-          </figure>
-          <figure class="guide-figure reveal" data-reveal>
-            <img src="assets/img/aws-iam/iam-05.png" alt="Grupos EC2-Admin, EC2-Support y S3-Support en IAM" loading="lazy">
-            <figcaption>5. Los tres grupos ya preparados en IAM.</figcaption>
-          </figure>
-        </div>
-
-        <div class="guide-callout reveal" data-reveal>
-          <p class="guide-callout-label">Concepto clave</p>
-          <p>Un grupo organiza usuarios con necesidades de acceso similares. Las políticas adjuntas al grupo se aplican a sus miembros; el grupo no es una cuenta con la que se inicie sesión.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="guide-section guide-section-alt" aria-labelledby="policies-title">
-      <div class="container">
-        <header class="guide-section-head reveal" data-reveal>
-          <p class="section-label"><span>04</span> Políticas</p>
-          <h2 id="policies-title">Entender el alcance de los permisos</h2>
-          <p>En <code>EC2-Support</code>, revisa <strong>AmazonEC2ReadOnlyAccess</strong>; en <code>S3-Support</code>, identifica <strong>AmazonS3ReadOnlyAccess</strong>. Ambas políticas permiten consultar, no escribir ni cambiar estados.</p>
-        </header>
-
-        <figure class="guide-figure guide-figure-wide reveal" data-reveal>
-          <img src="assets/img/aws-iam/iam-06.png" alt="Detalle de AmazonEC2ReadOnlyAccess con acciones de consulta y recurso asterisco" loading="lazy">
-          <figcaption>6. AmazonEC2ReadOnlyAccess: acciones de consulta y un recurso delimitado por la política.</figcaption>
-        </figure>
-
-        <div class="guide-table-wrap reveal" data-reveal>
-          <table class="guide-table guide-table-compact">
-            <thead><tr><th scope="col">Elemento</th><th scope="col">Qué significa</th></tr></thead>
-            <tbody>
-              <tr><td>Effect</td><td><code>Allow</code> permite la acción de esa regla; <code>Deny</code> la deniega.</td></tr>
-              <tr><td>Action</td><td>Identifica operaciones de la API, por ejemplo <code>ec2:Describe*</code>.</td></tr>
-              <tr><td>Resource</td><td>Delimita los recursos sobre los que actúa la regla. Un asterisco no autoriza todas las acciones.</td></tr>
-            </tbody>
-          </table>
-        </div>
-
-        <div class="guide-callout guide-callout-warning reveal" data-reveal>
-          <p class="guide-callout-label">Lectura no es administración</p>
-          <p><strong>AmazonEC2ReadOnlyAccess</strong> permite consultas de EC2, pero no incluye <code>ec2:StopInstances</code>. Poder ver una instancia no permite detenerla.</p>
-        </div>
-
-        <div class="guide-split">
-          <div class="guide-split-copy reveal" data-reveal>
-            <h3>EC2-Admin sin ampliar permisos</h3>
-            <p>En el grupo <code>EC2-Admin</code>, revisa la política integrada <strong>EC2-Admin-Policy</strong>. Usa la política existente: el nombre del grupo no equivale a <code>AdministratorAccess</code> ni concede acceso total a la cuenta.</p>
-            <table class="guide-table guide-table-compact">
-              <thead><tr><th scope="col">Tipo</th><th scope="col">Relación con la identidad</th></tr></thead>
-              <tbody>
-                <tr><td>AWS managed</td><td>Política independiente creada y mantenida por AWS; puede adjuntarse a varias identidades.</td></tr>
-                <tr><td>Customer inline</td><td>Política integrada en una identidad concreta, en este caso el grupo EC2-Admin.</td></tr>
-              </tbody>
-            </table>
-          </div>
-          <figure class="guide-figure reveal" data-reveal>
-            <img src="assets/img/aws-iam/iam-07.png" alt="Política EC2-Admin-Policy de tipo Customer inline en el grupo EC2-Admin" loading="lazy">
-            <figcaption>7. EC2-Admin-Policy aparece como una política integrada.</figcaption>
-          </figure>
-        </div>
-      </div>
-    </section>
-
-    <section class="guide-section" aria-labelledby="assign-title">
-      <div class="container">
-        <header class="guide-section-head reveal" data-reveal>
-          <p class="section-label"><span>05</span> Asignaciones</p>
-          <h2 id="assign-title">Asociar cada usuario con su grupo</h2>
-          <p>En <strong>User groups</strong>, entra a cada grupo, abre <strong>Users</strong> y usa <strong>Add users</strong>. Tras confirmar, verifica el nombre del usuario en la lista de miembros.</p>
-        </header>
-
-        <div class="guide-assignment-grid">
-          <article class="guide-assignment reveal" data-reveal><span>user-1</span><strong>→</strong><span>S3-Support</span></article>
-          <article class="guide-assignment reveal" data-reveal><span>user-2</span><strong>→</strong><span>EC2-Support</span></article>
-          <article class="guide-assignment reveal" data-reveal><span>user-3</span><strong>→</strong><span>EC2-Admin</span></article>
-        </div>
-
-        <div class="guide-media-grid guide-media-grid-two">
-          <figure class="guide-figure reveal" data-reveal>
-            <img src="assets/img/aws-iam/iam-08.png" alt="user-1 listado como miembro de S3-Support" loading="lazy">
-            <figcaption>8. user-1 ya figura como miembro de S3-Support.</figcaption>
-          </figure>
-          <figure class="guide-figure reveal" data-reveal>
-            <img src="assets/img/aws-iam/iam-09.png" alt="user-2 listado como miembro de EC2-Support" loading="lazy">
-            <figcaption>9. user-2 ya figura como miembro de EC2-Support.</figcaption>
-          </figure>
-        </div>
-
-        <div class="guide-media-grid guide-media-grid-two">
-          <figure class="guide-figure reveal" data-reveal>
-            <img src="assets/img/aws-iam/iam-10.png" alt="Selección de user-3 para añadirlo al grupo EC2-Admin" loading="lazy">
-            <figcaption>10. Selección de user-3 antes de confirmar su alta en EC2-Admin.</figcaption>
-          </figure>
-          <figure class="guide-figure reveal" data-reveal>
-            <img src="assets/img/aws-iam/iam-11.png" alt="Ubicación del enlace de inicio de sesión de usuarios IAM" loading="lazy">
-            <figcaption>11. Ubicación del enlace de inicio de sesión para usuarios IAM.</figcaption>
-          </figure>
-        </div>
-
-        <div class="guide-callout reveal" data-reveal>
-          <p class="guide-callout-label">Selección no es comprobación final</p>
-          <p>La selección de <code>user-3</code> debe confirmarse y después verificarse en la lista del grupo. Para cada prueba, cierra la sesión anterior y confirma la identidad activa antes de continuar.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="guide-section guide-section-alt" aria-labelledby="user1-title">
-      <div class="container">
-        <header class="guide-section-head reveal" data-reveal>
-          <p class="section-label"><span>06</span> Pruebas · user-1</p>
-          <h2 id="user1-title">Amazon S3 permitido, EC2 denegado</h2>
-          <p>Inicia sesión como <code>user-1</code>, abre S3 y entra en <strong>Buckets</strong>. El listado y el bucket de ejemplo deben poder consultarse; un bucket vacío no indica una denegación.</p>
-        </header>
-
-        <div class="guide-media-grid guide-media-grid-two">
-          <figure class="guide-figure reveal" data-reveal>
-            <img src="assets/img/aws-iam/iam-12.png" alt="user-1 puede consultar el listado de buckets de Amazon S3" loading="lazy">
-            <figcaption>12. user-1 puede consultar los buckets de Amazon S3.</figcaption>
-          </figure>
-          <figure class="guide-figure reveal" data-reveal>
-            <img src="assets/img/aws-iam/iam-13.png" alt="Bucket de ejemplo abierto sin objetos" loading="lazy">
-            <figcaption>13. El bucket de ejemplo se abre y no contiene objetos.</figcaption>
-          </figure>
-        </div>
-
-        <div class="guide-callout reveal" data-reveal>
-          <p class="guide-callout-label">Resultado observado</p>
-          <p>El listado se obtiene y el bucket se abre. <strong>Objects (0)</strong> o <strong>No objects</strong> indican que está vacío, no un problema de permisos.</p>
-        </div>
-
-        <div class="guide-split guide-split-reverse">
-          <figure class="guide-figure reveal" data-reveal>
-            <img src="assets/img/aws-iam/iam-14.png" alt="Error de autorización al consultar instancias EC2 con user-1" loading="lazy">
-            <figcaption>14. AWS rechaza la consulta de EC2 con user-1.</figcaption>
-          </figure>
-          <div class="guide-split-copy reveal" data-reveal>
-            <h3>El límite de user-1</h3>
-            <p>Sin cambiar de usuario, intenta abrir <strong>EC2 → Instances</strong>. La lectura de S3 no incluye permisos para <code>ec2:DescribeInstances</code>, por lo que la denegación es el resultado correcto de esta prueba.</p>
-            <p><strong>Autenticación</strong> responde quién eres; <strong>autorización</strong> responde qué puedes hacer. Iniciar sesión correctamente no concede acceso general a todos los servicios.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="guide-section" aria-labelledby="user2-title">
-      <div class="container">
-        <header class="guide-section-head reveal" data-reveal>
-          <p class="section-label"><span>07</span> Pruebas · user-2</p>
-          <h2 id="user2-title">Lectura de EC2 sin cambiar estados</h2>
-          <p>Con <code>user-2</code>, abre <strong>EC2 → Instances</strong> y confirma la región del laboratorio. En la grabación se usa <code>us-east-1</code>; localiza únicamente <strong>LabHost</strong>.</p>
-        </header>
-
-        <div class="guide-media-grid guide-media-grid-two">
-          <figure class="guide-figure reveal" data-reveal>
-            <img src="assets/img/aws-iam/iam-15.png" alt="Región de EC2 y sesión de user-2" loading="lazy">
-            <figcaption>15. Región de la prueba y sesión de user-2.</figcaption>
-          </figure>
-          <figure class="guide-figure reveal" data-reveal>
-            <img src="assets/img/aws-iam/iam-16.png" alt="Listado de instancias EC2 disponible para user-2" loading="lazy">
-            <figcaption>16. user-2 obtiene el listado de instancias y localiza LabHost.</figcaption>
-          </figure>
-        </div>
-
-        <div class="guide-callout reveal" data-reveal>
-          <p class="guide-callout-label">Resultado observado</p>
-          <p>user-2 puede consultar las instancias. La política de lectura de EC2 permite esta operación, pero no autoriza cambios de estado.</p>
-        </div>
-
-        <div class="guide-media-grid guide-media-grid-two guide-user2-results">
-          <figure class="guide-figure reveal" data-reveal>
-            <img src="assets/img/aws-iam/iam-17.png" alt="Menú Instance state con la opción Stop instance" loading="lazy">
-            <figcaption>17. Opción <em>Stop instance</em>; no selecciones <em>Terminate instance</em>.</figcaption>
-          </figure>
-          <figure class="guide-figure reveal" data-reveal>
-            <img src="assets/img/aws-iam/iam-18.png" alt="Confirmación de detener la instancia LabHost con user-2" loading="lazy">
-            <figcaption>18. Confirmación de la prueba de detención con user-2.</figcaption>
-          </figure>
-        </div>
-
-        <figure class="guide-figure guide-figure-19 reveal" data-reveal>
-          <img src="assets/img/aws-iam/iam-19.png" alt="Mensaje de AWS que rechaza ec2 StopInstances para user-2" loading="lazy">
-          <figcaption>19. La solicitud se rechaza por falta de autorización para <code>ec2:StopInstances</code>.</figcaption>
-        </figure>
-
-        <div class="guide-table-wrap reveal" data-reveal>
-          <table class="guide-table guide-table-compact">
-            <thead><tr><th scope="col">Qué revisar en el rechazo</th><th scope="col">Qué aporta</th></tr></thead>
-            <tbody>
-              <tr><td>La identidad user-2</td><td>Confirma que la prueba corresponde al perfil correcto.</td></tr>
-              <tr><td>La acción ec2:StopInstances</td><td>Indica la operación que no está autorizada.</td></tr>
-              <tr><td>Recurso y región</td><td>Ayudan a confirmar que actuaste sobre la instancia del laboratorio.</td></tr>
-              <tr><td>Falta de autorización aplicable</td><td>Explica la diferencia entre lectura y cambio de estado.</td></tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </section>
-
-    <section class="guide-section guide-section-alt" aria-labelledby="user3-title">
-      <div class="container">
-        <header class="guide-section-head reveal" data-reveal>
-          <p class="section-label"><span>08</span> Pruebas · user-3</p>
-          <h2 id="user3-title">La misma operación, otra política</h2>
-          <p>Inicia sesión como <code>user-3</code>, verifica la región, selecciona únicamente <strong>LabHost</strong> y repite <strong>Instance state → Stop instance → Stop</strong>.</p>
-        </header>
-
-        <div class="guide-media-grid guide-media-grid-two guide-user3-results">
-          <figure class="guide-figure reveal" data-reveal>
-            <img src="assets/img/aws-iam/iam-20.png" alt="Confirmación de detener LabHost con la sesión de user-3" loading="lazy">
-            <figcaption>20. Confirmación de detención con user-3.</figcaption>
-          </figure>
-          <figure class="guide-figure reveal" data-reveal>
-            <img src="assets/img/aws-iam/iam-22.png" alt="Estado de la instancia LabHost en Stopping" loading="lazy">
-            <figcaption>22. La instancia queda en <code>Stopping</code>, no en <code>Stopped</code> verificado.</figcaption>
-          </figure>
-        </div>
-
-        <figure class="guide-figure guide-figure-21 reveal" data-reveal>
-          <img src="assets/img/aws-iam/iam-21.png" alt="Confirmación de AWS de que se inició la solicitud de detención" loading="lazy">
-          <figcaption>21. AWS acepta la solicitud de detención.</figcaption>
-        </figure>
-
-        <div class="guide-callout reveal" data-reveal>
-          <p class="guide-callout-label">Resultado observado</p>
-          <p>La solicitud es aceptada y el panel muestra <strong>Stopping</strong>: la instancia se está deteniendo. Si el curso exige confirmar <strong>Stopped</strong>, espera y actualiza tu propio entorno; la grabación no muestra la transición final.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="guide-section" aria-labelledby="results-title">
-      <div class="container">
-        <header class="guide-section-head reveal" data-reveal>
-          <p class="section-label"><span>09</span> Resumen</p>
-          <h2 id="results-title">Resultados y cierre de la práctica</h2>
-          <p>El mínimo privilegio se comprueba en ambas direcciones: cada usuario hace lo necesario para su función y no puede ejecutar acciones fuera de ella.</p>
-        </header>
-
-        <div class="guide-table-wrap reveal" data-reveal>
-          <table class="guide-table">
-            <caption>Matriz de resultados</caption>
-            <thead><tr><th scope="col">Usuario</th><th scope="col">Operación</th><th scope="col">Resultado</th><th scope="col">Evidencia</th></tr></thead>
-            <tbody>
-              <tr><td>user-1</td><td>Listar buckets y abrir el bucket</td><td>Permitido</td><td>Observado</td></tr>
-              <tr><td>user-1</td><td>Consultar instancias EC2</td><td>Denegado</td><td>Observado</td></tr>
-              <tr><td>user-2</td><td>Consultar instancias EC2</td><td>Permitido</td><td>Observado</td></tr>
-              <tr><td>user-2</td><td>Detener LabHost</td><td>Denegado</td><td>Observado</td></tr>
-              <tr><td>user-2</td><td>Listar buckets S3</td><td>Denegado</td><td>Observado</td></tr>
-              <tr><td>user-3</td><td>Solicitar StopInstances</td><td>Aceptado; Stopping</td><td>Observado</td></tr>
-              <tr><td>user-3</td><td>Iniciar una instancia</td><td>Permitido por la política</td><td>Acción autorizada para EC2-Admin</td></tr>
-            </tbody>
-          </table>
-        </div>
-
-        <div class="guide-split">
-          <div class="guide-split-copy reveal" data-reveal>
-            <h3>Antes de finalizar</h3>
-            <p>Vuelve a la guía de AWS Academy, revisa las asignaciones solicitadas y guarda únicamente las evidencias que pida tu instructor. Envía el laboratorio solo cuando la plataforma lo solicite y espera una confirmación real antes de finalizarlo.</p>
-            <p>Después, cierra las sesiones de prueba y termina el laboratorio siguiendo las instrucciones del curso. No publiques credenciales ni enlaces de una sesión activa.</p>
-            <ul class="guide-checklist">
-              <li>user-1 pertenece a S3-Support.</li>
-              <li>user-2 pertenece a EC2-Support.</li>
-              <li>user-3 pertenece a EC2-Admin y la lista ya terminó de cargar.</li>
-              <li>Cada prueba usa la identidad y región correctas.</li>
-              <li>Se conservaron los rechazos esperados, sin ampliar permisos.</li>
-              <li>Se verificó el estado final si la guía del curso lo exige.</li>
-            </ul>
-          </div>
-          <figure class="guide-figure reveal" data-reveal>
-            <img src="assets/img/aws-iam/iam-23.png" alt="Controles de envío y revisión del laboratorio de AWS Academy" loading="lazy">
-            <figcaption>23. Controles de envío y revisión; su presencia no demuestra un envío ni una calificación final.</figcaption>
-          </figure>
-        </div>
-
-        <div class="guide-callout guide-callout-warning reveal" data-reveal>
-          <p class="guide-callout-label">Regla de estudio</p>
-          <p>Antes de cambiar permisos, revisa: <strong>identidad → grupo → política → región → acción solicitada</strong>. Si una denegación forma parte del objetivo, no la elimines.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="guide-section guide-video-section" aria-labelledby="video-title">
-      <div class="container">
-        <header class="guide-section-head reveal" data-reveal>
-          <p class="section-label"><span>10</span> Video</p>
-          <h2 id="video-title">Tutorial del laboratorio</h2>
-          <p>Reproduce el video directamente desde la página para seguir la práctica paso a paso.</p>
-        </header>
-
-        <div class="video-frame reveal" data-reveal>
-          <iframe src="https://www.youtube-nocookie.com/embed/omNetpA0gLE?rel=0" title="Tutorial de Introducción a AWS IAM" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        </div>
-        <p class="video-fallback reveal" data-reveal>¿No carga el reproductor? <a href="https://youtu.be/omNetpA0gLE" target="_blank" rel="noopener noreferrer">Ver el video en YouTube ↗</a></p>
+              <span class="project-preview-cta">Explorar proyecto <b aria-hidden="true">↗</b></span>
+            </div>
+          </a>
+        </article>
       </div>
     </section>
   </main>
@@ -453,7 +110,7 @@
     <div class="container footer-inner">
       <p>© <span id="year">2026</span> Abdiel Camargo</p>
       <p class="footer-meta">Portafolio · HTML, CSS y JavaScript · <a href="https://www.linkedin.com/in/camargoabdiel/" target="_blank" rel="noopener noreferrer">LinkedIn</a></p>
-      <a class="back-top" href="#contenido">Volver arriba ↑</a>
+      <a class="back-top" href="index.html#inicio">Volver al inicio ↑</a>
     </div>
   </footer>
 

@@ -23,14 +23,15 @@ Interfaz limpia con acentos de terminal, sin decoración innecesaria:
 ```
 .
 ├── index.html                 # Página principal
-├── proyectos.html             # Página independiente de proyectos
+├── proyectos.html             # Catálogo de proyectos
+├── aws-iam.html               # Proyecto: Introducción a AWS IAM
 ├── assets/
 │   ├── css/app.css           # Estilos, terminal y responsive
 │   ├── js/main.js             # Menú, scrollspy, progreso y animaciones
 │   ├── fonts/                 # JetBrains Mono e Inter autoalojadas
 │   ├── img/favicon.svg        # Icono del sitio
 │   ├── img/og-image.png       # Imagen de vista previa para redes sociales
-│   ├── img/aws-iam/           # 23 capturas de la guía ilustrada de AWS IAM
+│   ├── img/aws-iam/           # 23 capturas del laboratorio AWS IAM
 │   └── cv/                    # Currículum en PDF descargable
 ├── .github/workflows/deploy.yml
 ├── .nojekyll                  # Evita el procesamiento con Jekyll en GitHub Pages
@@ -43,7 +44,7 @@ Interfaz limpia con acentos de terminal, sin decoración innecesaria:
 2. **Sobre mí** — perfil, datos de contacto y descarga del CV.
 3. **Habilidades** — 9 áreas de especialidad con iconos SVG + stack de herramientas.
 4. **Experiencia** — Universidad del Istmo, AIESEC y pasantía en Institute College Panamá / CSCYT.
-5. **Proyectos** — guía ilustrada del laboratorio «Introducción a AWS IAM», con 23 capturas y video integrado.
+5. **Proyectos** — catálogo escalable; actualmente incluye el laboratorio «Introducción a AWS IAM» con video, imágenes y documentación.
 6. **Formación** — educación, certificaciones y reconocimientos con estado.
 7. **Contacto** — enlaces directos e iconos de correo, GitHub, LinkedIn y teléfono.
 
