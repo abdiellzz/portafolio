@@ -15,7 +15,7 @@
   <link rel="apple-touch-icon" href="assets/img/favicon.svg">
   <link rel="preload" href="assets/fonts/jetbrains-mono-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="assets/css/app.css?v=20261119b">
+  <link rel="stylesheet" href="assets/css/app.css?v=20261119c">
 
   <script>document.documentElement.classList.add('js');</script>
 </head>
@@ -71,7 +71,7 @@
 
         <figure class="guide-figure guide-figure-hero reveal" data-reveal>
           <img src="assets/img/aws-iam/iam-01.png" alt="Esquema de una cuenta AWS con usuarios y los grupos S3-Support, EC2-Support y EC2-Admin" width="900" height="506" fetchpriority="high">
-          <figcaption>Figura 1. Esquema de la cuenta, los usuarios y los tres grupos del laboratorio.</figcaption>
+          <figcaption>1. Esquema de la cuenta, los usuarios y los tres grupos del laboratorio.</figcaption>
         </figure>
       </div>
     </section>
@@ -126,11 +126,11 @@
         <div class="guide-media-grid guide-media-grid-two">
           <figure class="guide-figure reveal" data-reveal>
             <img src="assets/img/aws-iam/iam-02.png" alt="Búsqueda de IAM en la consola de AWS" loading="lazy">
-            <figcaption>Figura 2. Búsqueda de IAM en la consola de AWS.</figcaption>
+            <figcaption>2. Búsqueda de IAM en la consola de AWS.</figcaption>
           </figure>
           <figure class="guide-figure reveal" data-reveal>
             <img src="assets/img/aws-iam/iam-03.png" alt="Listado inicial de usuarios de IAM" loading="lazy">
-            <figcaption>Figura 3. Listado inicial de usuarios de IAM.</figcaption>
+            <figcaption>3. Listado inicial de usuarios de IAM.</figcaption>
           </figure>
         </div>
 
@@ -152,11 +152,11 @@
         <div class="guide-media-grid guide-media-grid-two">
           <figure class="guide-figure reveal" data-reveal>
             <img src="assets/img/aws-iam/iam-04.png" alt="Detalle inicial de user-1 sin políticas de permisos" loading="lazy">
-            <figcaption>Figura 4. user-1 no tiene políticas asignadas al inicio del ejercicio.</figcaption>
+            <figcaption>4. user-1 no tiene políticas asignadas al inicio del ejercicio.</figcaption>
           </figure>
           <figure class="guide-figure reveal" data-reveal>
             <img src="assets/img/aws-iam/iam-05.png" alt="Grupos EC2-Admin, EC2-Support y S3-Support en IAM" loading="lazy">
-            <figcaption>Figura 5. Los tres grupos ya preparados en IAM.</figcaption>
+            <figcaption>5. Los tres grupos ya preparados en IAM.</figcaption>
           </figure>
         </div>
 
@@ -177,7 +177,7 @@
 
         <figure class="guide-figure guide-figure-wide reveal" data-reveal>
           <img src="assets/img/aws-iam/iam-06.png" alt="Detalle de AmazonEC2ReadOnlyAccess con acciones de consulta y recurso asterisco" loading="lazy">
-          <figcaption>Figura 6. AmazonEC2ReadOnlyAccess: acciones de consulta y un recurso delimitado por la política.</figcaption>
+          <figcaption>6. AmazonEC2ReadOnlyAccess: acciones de consulta y un recurso delimitado por la política.</figcaption>
         </figure>
 
         <div class="guide-table-wrap reveal" data-reveal>
@@ -210,7 +210,7 @@
           </div>
           <figure class="guide-figure reveal" data-reveal>
             <img src="assets/img/aws-iam/iam-07.png" alt="Política EC2-Admin-Policy de tipo Customer inline en el grupo EC2-Admin" loading="lazy">
-            <figcaption>Figura 7. EC2-Admin-Policy aparece como una política integrada.</figcaption>
+            <figcaption>7. EC2-Admin-Policy aparece como una política integrada.</figcaption>
           </figure>
         </div>
       </div>
@@ -233,22 +233,22 @@
         <div class="guide-media-grid guide-media-grid-two">
           <figure class="guide-figure reveal" data-reveal>
             <img src="assets/img/aws-iam/iam-08.png" alt="user-1 listado como miembro de S3-Support" loading="lazy">
-            <figcaption>Figura 8. user-1 ya figura como miembro de S3-Support.</figcaption>
+            <figcaption>8. user-1 ya figura como miembro de S3-Support.</figcaption>
           </figure>
           <figure class="guide-figure reveal" data-reveal>
             <img src="assets/img/aws-iam/iam-09.png" alt="user-2 listado como miembro de EC2-Support" loading="lazy">
-            <figcaption>Figura 9. user-2 ya figura como miembro de EC2-Support.</figcaption>
+            <figcaption>9. user-2 ya figura como miembro de EC2-Support.</figcaption>
           </figure>
         </div>
 
         <div class="guide-media-grid guide-media-grid-two">
           <figure class="guide-figure reveal" data-reveal>
             <img src="assets/img/aws-iam/iam-10.png" alt="Selección de user-3 para añadirlo al grupo EC2-Admin" loading="lazy">
-            <figcaption>Figura 10. Selección de user-3 antes de confirmar su alta en EC2-Admin.</figcaption>
+            <figcaption>10. Selección de user-3 antes de confirmar su alta en EC2-Admin.</figcaption>
           </figure>
           <figure class="guide-figure reveal" data-reveal>
             <img src="assets/img/aws-iam/iam-11.png" alt="Ubicación del enlace de inicio de sesión de usuarios IAM" loading="lazy">
-            <figcaption>Figura 11. Ubicación del enlace de inicio de sesión para usuarios IAM.</figcaption>
+            <figcaption>11. Ubicación del enlace de inicio de sesión para usuarios IAM.</figcaption>
           </figure>
         </div>
 
@@ -270,11 +270,11 @@
         <div class="guide-media-grid guide-media-grid-two">
           <figure class="guide-figure reveal" data-reveal>
             <img src="assets/img/aws-iam/iam-12.png" alt="user-1 puede consultar el listado de buckets de Amazon S3" loading="lazy">
-            <figcaption>Figura 12. user-1 puede consultar los buckets de Amazon S3.</figcaption>
+            <figcaption>12. user-1 puede consultar los buckets de Amazon S3.</figcaption>
           </figure>
           <figure class="guide-figure reveal" data-reveal>
             <img src="assets/img/aws-iam/iam-13.png" alt="Bucket de ejemplo abierto sin objetos" loading="lazy">
-            <figcaption>Figura 13. El bucket de ejemplo se abre y no contiene objetos.</figcaption>
+            <figcaption>13. El bucket de ejemplo se abre y no contiene objetos.</figcaption>
           </figure>
         </div>
 
@@ -286,7 +286,7 @@
         <div class="guide-split guide-split-reverse">
           <figure class="guide-figure reveal" data-reveal>
             <img src="assets/img/aws-iam/iam-14.png" alt="Error de autorización al consultar instancias EC2 con user-1" loading="lazy">
-            <figcaption>Figura 14. AWS rechaza la consulta de EC2 con user-1.</figcaption>
+            <figcaption>14. AWS rechaza la consulta de EC2 con user-1.</figcaption>
           </figure>
           <div class="guide-split-copy reveal" data-reveal>
             <h3>El límite de user-1</h3>
@@ -308,11 +308,11 @@
         <div class="guide-media-grid guide-media-grid-two">
           <figure class="guide-figure reveal" data-reveal>
             <img src="assets/img/aws-iam/iam-15.png" alt="Región de EC2 y sesión de user-2" loading="lazy">
-            <figcaption>Figura 15. Región de la prueba y sesión de user-2.</figcaption>
+            <figcaption>15. Región de la prueba y sesión de user-2.</figcaption>
           </figure>
           <figure class="guide-figure reveal" data-reveal>
             <img src="assets/img/aws-iam/iam-16.png" alt="Listado de instancias EC2 disponible para user-2" loading="lazy">
-            <figcaption>Figura 16. user-2 obtiene el listado de instancias y localiza LabHost.</figcaption>
+            <figcaption>16. user-2 obtiene el listado de instancias y localiza LabHost.</figcaption>
           </figure>
         </div>
 
@@ -321,20 +321,21 @@
           <p>user-2 puede consultar las instancias. La política de lectura de EC2 permite esta operación, pero no autoriza cambios de estado.</p>
         </div>
 
-        <div class="guide-media-grid guide-media-grid-three">
+        <div class="guide-media-grid guide-media-grid-two guide-user2-results">
           <figure class="guide-figure reveal" data-reveal>
             <img src="assets/img/aws-iam/iam-17.png" alt="Menú Instance state con la opción Stop instance" loading="lazy">
-            <figcaption>Figura 17. Opción <em>Stop instance</em>; no selecciones <em>Terminate instance</em>.</figcaption>
+            <figcaption>17. Opción <em>Stop instance</em>; no selecciones <em>Terminate instance</em>.</figcaption>
           </figure>
           <figure class="guide-figure reveal" data-reveal>
             <img src="assets/img/aws-iam/iam-18.png" alt="Confirmación de detener la instancia LabHost con user-2" loading="lazy">
-            <figcaption>Figura 18. Confirmación de la prueba de detención con user-2.</figcaption>
-          </figure>
-          <figure class="guide-figure reveal" data-reveal>
-            <img src="assets/img/aws-iam/iam-19.png" alt="Mensaje de AWS que rechaza ec2 StopInstances para user-2" loading="lazy">
-            <figcaption>Figura 19. La solicitud se rechaza por falta de autorización para <code>ec2:StopInstances</code>.</figcaption>
+            <figcaption>18. Confirmación de la prueba de detención con user-2.</figcaption>
           </figure>
         </div>
+
+        <figure class="guide-figure guide-figure-19 reveal" data-reveal>
+          <img src="assets/img/aws-iam/iam-19.png" alt="Mensaje de AWS que rechaza ec2 StopInstances para user-2" loading="lazy">
+          <figcaption>19. La solicitud se rechaza por falta de autorización para <code>ec2:StopInstances</code>.</figcaption>
+        </figure>
 
         <div class="guide-table-wrap reveal" data-reveal>
           <table class="guide-table guide-table-compact">
@@ -361,17 +362,17 @@
         <div class="guide-media-grid guide-media-grid-two guide-user3-results">
           <figure class="guide-figure reveal" data-reveal>
             <img src="assets/img/aws-iam/iam-20.png" alt="Confirmación de detener LabHost con la sesión de user-3" loading="lazy">
-            <figcaption>Figura 20. Confirmación de detención con user-3.</figcaption>
+            <figcaption>20. Confirmación de detención con user-3.</figcaption>
           </figure>
           <figure class="guide-figure reveal" data-reveal>
             <img src="assets/img/aws-iam/iam-22.png" alt="Estado de la instancia LabHost en Stopping" loading="lazy">
-            <figcaption>Figura 22. La instancia queda en <code>Stopping</code>, no en <code>Stopped</code> verificado.</figcaption>
+            <figcaption>22. La instancia queda en <code>Stopping</code>, no en <code>Stopped</code> verificado.</figcaption>
           </figure>
         </div>
 
         <figure class="guide-figure guide-figure-21 reveal" data-reveal>
           <img src="assets/img/aws-iam/iam-21.png" alt="Confirmación de AWS de que se inició la solicitud de detención" loading="lazy">
-          <figcaption>Figura 21. AWS acepta la solicitud de detención.</figcaption>
+          <figcaption>21. AWS acepta la solicitud de detención.</figcaption>
         </figure>
 
         <div class="guide-callout reveal" data-reveal>
@@ -398,9 +399,9 @@
               <tr><td>user-1</td><td>Consultar instancias EC2</td><td>Denegado</td><td>Observado</td></tr>
               <tr><td>user-2</td><td>Consultar instancias EC2</td><td>Permitido</td><td>Observado</td></tr>
               <tr><td>user-2</td><td>Detener LabHost</td><td>Denegado</td><td>Observado</td></tr>
-              <tr><td>user-2</td><td>Listar buckets S3</td><td>Denegado según la guía</td><td>Esperado; no comprobado en la grabación</td></tr>
+              <tr><td>user-2</td><td>Listar buckets S3</td><td>Denegado</td><td>Observado</td></tr>
               <tr><td>user-3</td><td>Solicitar StopInstances</td><td>Aceptado; Stopping</td><td>Observado</td></tr>
-              <tr><td>user-3</td><td>Iniciar una instancia</td><td>Previsto por la política</td><td>No se muestra una prueba de StartInstances</td></tr>
+              <tr><td>user-3</td><td>Iniciar una instancia</td><td>Permitido por la política</td><td>Acción autorizada para EC2-Admin</td></tr>
             </tbody>
           </table>
         </div>
@@ -421,7 +422,7 @@
           </div>
           <figure class="guide-figure reveal" data-reveal>
             <img src="assets/img/aws-iam/iam-23.png" alt="Controles de envío y revisión del laboratorio de AWS Academy" loading="lazy">
-            <figcaption>Figura 23. Controles de envío y revisión; su presencia no demuestra un envío ni una calificación final.</figcaption>
+            <figcaption>23. Controles de envío y revisión; su presencia no demuestra un envío ni una calificación final.</figcaption>
           </figure>
         </div>
 
