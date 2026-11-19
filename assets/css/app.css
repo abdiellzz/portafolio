@@ -862,7 +862,11 @@ button { font: inherit; color: inherit; }
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 0.8rem;
+  align-items: start;
 }
+.cert-gallery--achievements { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.cert-gallery--achievements .cert-card-media,
+.cert-gallery--achievements .cert-card-media--portrait { aspect-ratio: 16 / 10; }
 .cert-card {
   display: flex;
   flex-direction: column;
