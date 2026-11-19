@@ -28,7 +28,7 @@
   <link rel="apple-touch-icon" href="assets/img/favicon.svg">
   <link rel="preload" href="assets/fonts/jetbrains-mono-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="assets/css/app.css?v=20261119j">
+  <link rel="stylesheet" href="assets/css/app.css?v=20261119k">
 
   <script>document.documentElement.classList.add('js');</script>
 
@@ -75,7 +75,7 @@
           <li><a href="#sobre-mi" class="nav-link">Sobre mí</a></li>
           <li><a href="#habilidades" class="nav-link">Habilidades</a></li>
           <li><a href="#experiencia" class="nav-link">Experiencia</a></li>
-          <li><a href="proyectos.html" class="nav-link">Proyectos</a></li>
+          <li><a href="proyectos.html" class="nav-link" data-section="#proyectos-destacados">Proyectos</a></li>
           <li><a href="#certificaciones" class="nav-link">Formación</a></li>
           <li><a href="#contacto" class="nav-link">Contacto</a></li>
         </ul>
@@ -165,14 +165,14 @@
           <figcaption><span>CTF NUMU · 4.º lugar</span> · 8,385 pts</figcaption>
         </figure>
 
-        <figure class="highlight reveal" data-reveal>
-          <img src="assets/img/highlight-copa.jpg" alt="Equipo durante la Hackatón Copa Airlines 2026" width="666" height="372" loading="lazy" decoding="async">
-          <figcaption><span>Hackatón Copa Airlines</span> · Azure y Dynatrace</figcaption>
+        <figure class="highlight highlight-certificate reveal" data-reveal>
+          <img src="assets/img/certificates/hackathon-copa-airlines.png" alt="Certificado de participación de Abdiel Arturo Camargo Valdes en la séptima Hackathon Copa Airlines" width="800" height="553" loading="lazy" decoding="async">
+          <figcaption><span>Hackathon Copa Airlines</span> · DevOps, API y observabilidad</figcaption>
         </figure>
 
         <figure class="highlight reveal" data-reveal>
-          <img src="assets/img/highlight-unistmo.jpg" alt="Equipo de la Universidad del Istmo, finalista del hackIAthon de VIAMATICA ONDU" width="666" height="306" loading="lazy" decoding="async">
-          <figcaption><span>hackIAthon de VIAMATICA ONDU · finalista</span> · Universidad del Istmo</figcaption>
+          <img src="assets/img/highlight-unistmo.jpg" alt="Equipo finalista del hackIAthon de Viamatica ONDU" width="666" height="306" loading="lazy" decoding="async">
+          <figcaption><span>hackIAthon de Viamatica ONDU · finalista</span></figcaption>
         </figure>
       </div>
     </section>
@@ -397,7 +397,7 @@
       </div>
     </section>
 
-    <section class="project-invite" aria-labelledby="project-invite-title">
+    <section class="project-invite" id="proyectos-destacados" aria-labelledby="project-invite-title">
       <div class="container">
         <div class="project-invite-inner">
           <div class="project-invite-copy">
@@ -439,9 +439,9 @@
           </article>
         </div>
 
-        <h3 class="subhead reveal" data-reveal>Certificados con evidencia</h3>
+        <h3 class="subhead reveal" data-reveal>Certificados y reconocimientos con evidencia</h3>
 
-        <div class="cert-gallery" aria-label="Certificados con sus constancias">
+        <div class="cert-gallery" aria-label="Certificados y reconocimientos con sus evidencias">
           <article class="cert-card reveal" data-reveal>
             <a class="cert-card-media" href="assets/img/certificates/microsoft-365-administrator.png" target="_blank" rel="noopener noreferrer" aria-label="Abrir constancia del curso Administrador de Microsoft 365">
               <img src="assets/img/certificates/microsoft-365-administrator.png" width="1929" height="1364" loading="lazy" decoding="async" alt="Certificado de Abdiel Arturo Camargo Valdes por completar el curso Administrador de Microsoft 365">
@@ -489,9 +489,45 @@
               <p class="cert-card-meta">44/100 · 10 nov. 2026</p>
             </div>
           </article>
+
+          <article class="cert-card reveal" data-reveal>
+            <a class="cert-card-media" href="assets/img/certificates/hackathon-copa-airlines.png" target="_blank" rel="noopener noreferrer" aria-label="Abrir certificado de participación en la Hackathon Copa Airlines">
+              <img src="assets/img/certificates/hackathon-copa-airlines.png" width="800" height="553" loading="lazy" decoding="async" alt="Certificado de participación de Abdiel Arturo Camargo Valdes en la séptima Hackathon Copa Airlines">
+              <span class="cert-card-open">Ver certificado <span aria-hidden="true">↗</span></span>
+            </a>
+            <div class="cert-card-body">
+              <p class="cert-card-provider">Copa Airlines</p>
+              <h4>7.ª Hackathon Copa Airlines</h4>
+              <p class="cert-card-meta">DevOps, API y observabilidad · 8–9 oct. 2026</p>
+            </div>
+          </article>
+
+          <article class="cert-card reveal" data-reveal>
+            <a class="cert-card-media" href="assets/img/certificates/hackiathon-finalista-johnpork.png" target="_blank" rel="noopener noreferrer" aria-label="Abrir reconocimiento de equipo finalista en el hackIAthon de Viamatica ONDU">
+              <img src="assets/img/certificates/hackiathon-finalista-johnpork.png" width="800" height="1000" loading="lazy" decoding="async" alt="Anuncio del equipo JOHNPORK como finalista del hackIAthon de Viamatica ONDU">
+              <span class="cert-card-open">Ver reconocimiento <span aria-hidden="true">↗</span></span>
+            </a>
+            <div class="cert-card-body">
+              <p class="cert-card-provider">hackIAthon</p>
+              <h4>hackIAthon de Viamatica ONDU · equipo finalista</h4>
+              <p class="cert-card-meta">Equipo JOHNPORK · Panamá</p>
+            </div>
+          </article>
+
+          <article class="cert-card reveal" data-reveal>
+            <a class="cert-card-media" href="assets/img/certificates/mides-allen-reconocimiento.png" target="_blank" rel="noopener noreferrer" aria-label="Abrir reconocimiento del MIDES por el primer lugar del pitch de ALLEN, la IA">
+              <img src="assets/img/certificates/mides-allen-reconocimiento.png" width="800" height="619" loading="lazy" decoding="async" alt="Certificado de reconocimiento del Ministerio de Desarrollo Social a Abdiel Arturo Camargo Valdés por la Feria de Innovación y Emprendimiento Juvenil Chiriquí 2026">
+              <span class="cert-card-open">Ver reconocimiento <span aria-hidden="true">↗</span></span>
+            </a>
+            <div class="cert-card-body">
+              <p class="cert-card-provider">MIDES · Chiriquí 2026</p>
+              <h4>1.er lugar del pitch de ALLEN, la IA</h4>
+              <p class="cert-card-meta">Feria de Innovación y Emprendimiento Juvenil</p>
+            </div>
+          </article>
         </div>
 
-        <h3 class="subhead subhead-spaced reveal" data-reveal>Otras certificaciones y reconocimientos</h3>
+        <h3 class="subhead subhead-spaced reveal" data-reveal>Otros cursos y logros</h3>
 
         <ul class="cert-list">
           <li class="reveal" data-reveal>
@@ -509,14 +545,6 @@
             </div>
             <span class="cert-date">Oct. 2026</span>
             <span class="cert-state highlight">4.º Nacional</span>
-          </li>
-          <li class="reveal" data-reveal>
-            <div class="cert-main">
-              <h3>Feria de Innovación y Emprendimiento</h3>
-              <p>MIDES · Boquete · proyecto ALLEN</p>
-            </div>
-            <span class="cert-date">3 Oct. 2026</span>
-            <span class="cert-state highlight">1.er lugar</span>
           </li>
           <li class="reveal" data-reveal>
             <div class="cert-main">
@@ -580,6 +608,6 @@
     </div>
   </footer>
 
-  <script src="assets/js/main.js?v=20261114c" defer></script>
+  <script src="assets/js/main.js?v=20261114d" defer></script>
 </body>
 </html>

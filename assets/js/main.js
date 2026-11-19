@@ -52,6 +52,40 @@
     });
   }
 
+  /* ---------- Sección activa en la navegación ---------- */
+  var navLinks = Array.prototype.slice.call(document.querySelectorAll('.nav-link'));
+  var navSections = navLinks
+    .map(function (link) {
+      // data-section permite indicar la sección de contexto de un enlace externo.
+      // Así, “Proyectos” mantiene su catálogo independiente y se marca al recorrer
+      // la invitación de proyectos en la página de inicio.
+      var target = link.getAttribute('data-section') || link.getAttribute('href');
+      var section = target && target.charAt(0) === '#' ? document.querySelector(target) : null;
+      return section ? { link: link, section: section } : null;
+    })
+    .filter(Boolean);
+
+  function updateActiveNavigation() {
+    if (!navSections.length) return;
+
+    // El punto de lectura acompaña a la cabecera fija y evita perder secciones
+    // breves al hacer scroll rápido, como la invitación de Proyectos.
+    var headerOffset = header ? header.offsetHeight : 0;
+    var marker = headerOffset + Math.min(window.innerHeight * 0.34, 280);
+    var current = null;
+
+    navSections.forEach(function (item) {
+      if (item.section.getBoundingClientRect().top <= marker) current = item;
+    });
+
+    navLinks.forEach(function (link) {
+      var active = current && link === current.link;
+      link.classList.toggle('is-active', active);
+      if (active) link.setAttribute('aria-current', 'true');
+      else link.removeAttribute('aria-current');
+    });
+  }
+
   /* ---------- Cabecera y barra de progreso ---------- */
   var header = document.getElementById('site-header');
   var progress = document.getElementById('scroll-progress');
@@ -63,6 +97,7 @@
 
     if (header) header.classList.toggle('is-scrolled', scrollTop > 10);
     if (progress) progress.style.width = height > 0 ? ((scrollTop / height) * 100).toFixed(2) + '%' : '0%';
+    updateActiveNavigation();
     ticking = false;
   }
 
@@ -72,33 +107,8 @@
       window.requestAnimationFrame(onScroll);
     }
   }, { passive: true });
+  window.addEventListener('resize', updateActiveNavigation, { passive: true });
   onScroll();
-
-  /* ---------- Sección activa en la navegación ---------- */
-  var navLinks = Array.prototype.slice.call(document.querySelectorAll('.nav-link'));
-  var sections = navLinks
-    .map(function (link) {
-      var id = link.getAttribute('href');
-      return id && id.charAt(0) === '#' ? document.querySelector(id) : null;
-    })
-    .filter(Boolean);
-
-  if ('IntersectionObserver' in window && sections.length) {
-    var spy = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (!entry.isIntersecting) return;
-        var id = '#' + entry.target.id;
-        navLinks.forEach(function (link) {
-          var active = link.getAttribute('href') === id;
-          link.classList.toggle('is-active', active);
-          if (active) link.setAttribute('aria-current', 'true');
-          else link.removeAttribute('aria-current');
-        });
-      });
-    }, { rootMargin: '-45% 0px -50% 0px', threshold: 0 });
-
-    sections.forEach(function (section) { spy.observe(section); });
-  }
 
   /* ---------- Animaciones de entrada ---------- */
   var revealEls = Array.prototype.slice.call(document.querySelectorAll('.reveal'));

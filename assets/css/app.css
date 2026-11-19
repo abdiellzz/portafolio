@@ -344,6 +344,11 @@ button { font: inherit; color: inherit; }
   object-fit: cover;
   filter: saturate(0.9) contrast(1.04);
 }
+.highlight.highlight-certificate img {
+  object-fit: contain;
+  background: #06174e;
+  filter: none;
+}
 
 .highlight figcaption {
   padding: 0.6rem 0.75rem;
@@ -726,7 +731,7 @@ button { font: inherit; color: inherit; }
   position: relative;
   isolation: isolate;
   overflow: hidden;
-  padding-block: clamp(2.75rem, 5.5vw, 4.25rem);
+  padding-block: clamp(3.25rem, 6.5vw, 5rem);
   border-block: 1px solid var(--accent-line);
   background:
     linear-gradient(90deg, rgba(126, 231, 135, 0.1) 0%, rgba(17, 21, 27, 0.9) 50%, rgba(126, 231, 135, 0.055) 100%);
@@ -756,25 +761,26 @@ button { font: inherit; color: inherit; }
 .project-invite-copy .section-label { margin-bottom: 0.65rem; }
 .project-invite-copy h2 {
   font-family: var(--mono);
-  font-size: clamp(1.55rem, 3.2vw, 2.35rem);
-  font-weight: 600;
-  letter-spacing: -0.05em;
-  line-height: 1.14;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 750;
+  letter-spacing: -0.065em;
+  line-height: 1.08;
 }
 .project-invite-copy > p:last-child {
-  max-width: 35rem;
-  margin-top: 0.8rem;
-  color: var(--muted);
-  font-size: 0.88rem;
-  line-height: 1.75;
+  max-width: 38rem;
+  margin-top: 1rem;
+  color: var(--text);
+  font-size: clamp(0.94rem, 1.4vw, 1.04rem);
+  font-weight: 500;
+  line-height: 1.7;
 }
 .project-invite-button {
   position: relative;
   display: grid;
   flex: none;
   grid-template-columns: 1fr auto;
-  min-width: min(100%, 18rem);
-  padding: 1.15rem 1.25rem;
+  min-width: min(100%, 22rem);
+  padding: 1.45rem 1.55rem;
   overflow: hidden;
   border: 1px solid var(--accent);
   border-radius: var(--radius);
@@ -789,21 +795,22 @@ button { font: inherit; color: inherit; }
 }
 .project-invite-button-label {
   grid-column: 1 / -1;
-  margin-bottom: 0.32rem;
+  margin-bottom: 0.5rem;
   font-family: var(--mono);
-  font-size: 0.65rem;
-  letter-spacing: 0.045em;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.055em;
   text-transform: uppercase;
 }
 .project-invite-button strong {
   align-self: center;
   font-family: var(--mono);
-  font-size: 0.95rem;
-  font-weight: 600;
+  font-size: 1.15rem;
+  font-weight: 750;
 }
 .project-invite-button svg {
-  width: 1.15rem;
-  height: 1.15rem;
+  width: 1.35rem;
+  height: 1.35rem;
   align-self: center;
   fill: none;
   stroke: currentColor;
@@ -815,12 +822,13 @@ button { font: inherit; color: inherit; }
 .project-invite-button:hover svg { transform: translateX(3px); }
 .project-invite-button small {
   grid-column: 1 / -1;
-  margin-top: 0.65rem;
-  padding-top: 0.65rem;
+  margin-top: 0.85rem;
+  padding-top: 0.85rem;
   border-top: 1px solid rgba(11, 18, 12, 0.22);
   font-family: var(--mono);
-  font-size: 0.6rem;
-  opacity: 0.78;
+  font-size: 0.68rem;
+  font-weight: 500;
+  opacity: 0.84;
 }
 
 /* ---------- Formación ---------- */
@@ -1606,7 +1614,8 @@ button { font: inherit; color: inherit; }
   .guide-section-head { margin-bottom: 1.5rem; }
   .guide-hero { padding-top: calc(var(--header-h) + 2.8rem); }
   .project-invite-inner { align-items: stretch; flex-direction: column; }
-  .project-invite-button { width: 100%; }
+  .project-invite-button { width: 100%; min-width: 0; padding: 1.5rem; }
+  .project-invite-button strong { font-size: 1.25rem; }
   .project-preview-media { min-height: 13rem; }
   .project-preview-content { min-height: 0; }
   .project-preview-includes ul { display: grid; gap: 0.48rem; }
