@@ -723,15 +723,34 @@ button { font: inherit; color: inherit; }
 
 /* ---------- Invitación a proyectos ---------- */
 .project-invite {
-  padding-block: clamp(2rem, 4.5vw, 3.5rem);
-  border-block: 1px solid var(--line);
-  background: var(--bg-alt);
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding-block: clamp(2.75rem, 5.5vw, 4.25rem);
+  border-block: 1px solid var(--accent-line);
+  background:
+    linear-gradient(90deg, rgba(126, 231, 135, 0.1) 0%, rgba(17, 21, 27, 0.9) 50%, rgba(126, 231, 135, 0.055) 100%);
+}
+.project-invite::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 28rem;
+  height: 28rem;
+  right: -12rem;
+  top: 50%;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(126, 231, 135, 0.16), transparent 67%);
+  transform: translateY(-50%);
+  pointer-events: none;
 }
 .project-invite-inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: clamp(1.5rem, 5vw, 5rem);
+  padding-left: clamp(0.85rem, 2vw, 1.35rem);
+  border-left: 2px solid var(--accent);
 }
 .project-invite-copy { max-width: 42rem; }
 .project-invite-copy .section-label { margin-bottom: 0.65rem; }
