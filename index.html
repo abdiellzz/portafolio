@@ -28,7 +28,7 @@
   <link rel="apple-touch-icon" href="assets/img/favicon.svg">
   <link rel="preload" href="assets/fonts/jetbrains-mono-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="assets/css/app.css?v=20261119k">
+  <link rel="stylesheet" href="assets/css/app.css?v=20261119l">
 
   <script>document.documentElement.classList.add('js');</script>
 
@@ -75,7 +75,7 @@
           <li><a href="#sobre-mi" class="nav-link">Sobre mí</a></li>
           <li><a href="#habilidades" class="nav-link">Habilidades</a></li>
           <li><a href="#experiencia" class="nav-link">Experiencia</a></li>
-          <li><a href="proyectos.html" class="nav-link" data-section="#proyectos-destacados">Proyectos</a></li>
+          <li><a href="#proyectos" class="nav-link">Proyectos</a></li>
           <li><a href="#certificaciones" class="nav-link">Formación</a></li>
           <li><a href="#contacto" class="nav-link">Contacto</a></li>
         </ul>
@@ -103,7 +103,7 @@
             Python y Ollama.
           </p>
           <div class="hero-actions">
-            <a class="btn btn-primary" href="proyectos.html">Ver proyectos</a>
+            <a class="btn btn-primary" href="#proyectos">Ver proyectos</a>
             <a class="btn btn-outline" href="assets/cv/Abdiel-Camargo-CV.pdf" download>
               Descargar CV
               <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3v12m0 0 4.5-4.5M12 15l-4.5-4.5M5 19h14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -397,21 +397,51 @@
       </div>
     </section>
 
-    <section class="project-invite" id="proyectos-destacados" aria-labelledby="project-invite-title">
+    <!-- PROYECTOS -->
+    <section class="section" id="proyectos" aria-labelledby="projects-title">
       <div class="container">
-        <div class="project-invite-inner">
-          <div class="project-invite-copy">
-            <p class="section-label"><span>PROYECTOS</span> Trabajo seleccionado</p>
-            <h2 id="project-invite-title">Las ideas cobran<br>vida en la práctica.</h2>
-            <p>Explora laboratorios, soluciones técnicas y experimentos con evidencia, documentación y recursos para profundizar.</p>
-          </div>
+        <header class="section-head reveal" data-reveal>
+          <p class="section-label"><span>04</span> Proyectos</p>
+          <h2 id="projects-title">Proyectos seleccionados</h2>
+          <p class="section-lead">Laboratorios, soluciones técnicas y experimentos donde documento el proceso, las decisiones y los resultados.</p>
+        </header>
 
-          <a class="project-invite-button" href="proyectos.html">
-            <span class="project-invite-button-label">Explora mi trabajo</span>
-            <strong>Ver proyectos</strong>
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg>
-            <small>Video · imágenes · documentación</small>
-          </a>
+        <div class="projects-list" aria-label="Listado de proyectos">
+          <article class="project-preview reveal" data-reveal>
+            <a class="project-preview-link" href="aws-iam.html" aria-label="Abrir proyecto Introducción a AWS IAM">
+              <div class="project-preview-media">
+                <img src="assets/img/aws-iam/iam-01.png" alt="Esquema de usuarios y grupos del proyecto Introducción a AWS IAM" width="2200" height="1100" loading="lazy" decoding="async">
+                <span class="project-preview-index">01</span>
+              </div>
+
+              <div class="project-preview-content">
+                <p class="section-label"><span>AWS</span> IAM · Laboratorio</p>
+                <h3>Introducción a<br><span>AWS IAM</span></h3>
+                <p class="project-preview-subtitle">Usuarios, grupos, políticas y pruebas de acceso.</p>
+                <p class="project-preview-text">Un recorrido práctico para aplicar mínimo privilegio y comparar qué puede hacer cada identidad dentro del laboratorio.</p>
+
+                <div class="project-preview-includes">
+                  <p>Incluye</p>
+                  <ul aria-label="Contenido del proyecto">
+                    <li>
+                      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10-6.5-10-6.5Z"/></svg>
+                      Video guía
+                    </li>
+                    <li>
+                      <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4.5" width="17" height="15" rx="2"/><circle cx="8.5" cy="9" r="1.4"/><path d="m5.5 17 4.2-4.2 3 2.8 2.1-2 3.7 3.4"/></svg>
+                      23 imágenes
+                    </li>
+                    <li>
+                      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h8l4 4V20.5H6z"/><path d="M14 3.5v4h4M8.8 12h6.4M8.8 15.5h6.4"/></svg>
+                      Documentación
+                    </li>
+                  </ul>
+                </div>
+
+                <span class="project-preview-cta">Explorar proyecto <b aria-hidden="true">↗</b></span>
+              </div>
+            </a>
+          </article>
         </div>
       </div>
     </section>
@@ -420,7 +450,7 @@
     <section class="section" id="certificaciones">
       <div class="container">
         <header class="section-head reveal" data-reveal>
-          <p class="section-label"><span>04</span> Formación</p>
+          <p class="section-label"><span>05</span> Formación</p>
           <h2>Educación y certificaciones</h2>
           <p class="section-lead">Aprendizaje continuo, con credenciales que respaldan cada área del stack.</p>
         </header>
@@ -480,13 +510,49 @@
 
           <article class="cert-card reveal" data-reveal>
             <a class="cert-card-media" href="https://cert.efset.org/en/uK8h8N" target="_blank" rel="noopener noreferrer" aria-label="Ver certificado oficial EF SET de inglés de Abdiel Arturo Camargo Valdes">
-              <img src="https://cdn.efset.org/efset-widget/img/v2/social-media/4part/44.jpg" width="1200" height="630" loading="lazy" decoding="async" referrerpolicy="no-referrer" alt="Resultado oficial EF SET de inglés: nivel B1 Intermediate, 44 sobre 100">
+              <img src="assets/img/certificates/ef-set-b1-english.png" width="961" height="868" loading="lazy" decoding="async" alt="Vista previa del certificado EF SET de Abdiel Arturo Camargo Valdes: nivel B1 Intermediate, 44 sobre 100">
               <span class="cert-card-open">Ver certificado oficial <span aria-hidden="true">↗</span></span>
             </a>
             <div class="cert-card-body">
               <p class="cert-card-provider">EF SET</p>
               <h4>English Certificate · B1 Intermediate</h4>
               <p class="cert-card-meta">44/100 · 10 nov. 2026</p>
+            </div>
+          </article>
+
+          <article class="cert-card reveal" data-reveal>
+            <a class="cert-card-media" href="https://www.coursera.org/account/accomplishments/verify/OIKP2WH80QBG" target="_blank" rel="noopener noreferrer" aria-label="Ver certificado verificado de Google Cybersecurity Foundations en Coursera">
+              <img src="assets/img/certificates/google-cybersecurity-foundations.png" width="698" height="531" loading="lazy" decoding="async" alt="Certificado de Abdiel Camargo por completar Fundamentos de la ciberseguridad de Google a través de Coursera">
+              <span class="cert-card-open">Ver certificado verificado <span aria-hidden="true">↗</span></span>
+            </a>
+            <div class="cert-card-body">
+              <p class="cert-card-provider">Google / Coursera</p>
+              <h4>Fundamentos de la ciberseguridad</h4>
+              <p class="cert-card-meta">11 ene. 2026</p>
+            </div>
+          </article>
+
+          <article class="cert-card reveal" data-reveal>
+            <a class="cert-card-media" href="assets/img/certificates/linux-unhatched.png" target="_blank" rel="noopener noreferrer" aria-label="Abrir certificado Linux Unhatched">
+              <img src="assets/img/certificates/linux-unhatched.png" width="1280" height="867" loading="lazy" decoding="async" alt="Certificado Linux Unhatched otorgado a Abdiel Camargo por Cisco Networking Academy y la Universidad Tecnológica de Panamá">
+              <span class="cert-card-open">Ver certificado <span aria-hidden="true">↗</span></span>
+            </a>
+            <div class="cert-card-body">
+              <p class="cert-card-provider">Cisco Networking Academy / UTP</p>
+              <h4>Linux Unhatched</h4>
+              <p class="cert-card-meta">4 sep. 2026</p>
+            </div>
+          </article>
+
+          <article class="cert-card reveal" data-reveal>
+            <a class="cert-card-media" href="assets/img/certificates/ctf-ciberseguridad-8385.png" target="_blank" rel="noopener noreferrer" aria-label="Abrir resultado del CTF de Ciberseguridad">
+              <img src="assets/img/certificates/ctf-ciberseguridad-8385.png" width="480" height="386" loading="lazy" decoding="async" alt="Resultado de Abdiel Camargo en el CTF de Ciberseguridad: cuarto lugar con 8,385 puntos">
+              <span class="cert-card-open">Ver resultado <span aria-hidden="true">↗</span></span>
+            </a>
+            <div class="cert-card-body">
+              <p class="cert-card-provider">Min. de Seguridad Pública / ITSE</p>
+              <h4>CTF de Ciberseguridad · 4.º lugar</h4>
+              <p class="cert-card-meta">8,385 puntos · Panamá</p>
             </div>
           </article>
 
@@ -527,7 +593,7 @@
           </article>
         </div>
 
-        <h3 class="subhead subhead-spaced reveal" data-reveal>Otros cursos y logros</h3>
+        <h3 class="subhead subhead-spaced reveal" data-reveal>Curso en progreso</h3>
 
         <ul class="cert-list">
           <li class="reveal" data-reveal>
@@ -538,30 +604,6 @@
             <span class="cert-date">Oct. 2026</span>
             <span class="cert-state in-progress">En curso</span>
           </li>
-          <li class="reveal" data-reveal>
-            <div class="cert-main">
-              <h3>CTF de Ciberseguridad · 8,385 pts</h3>
-              <p>Min. de Seguridad Pública / ITSE</p>
-            </div>
-            <span class="cert-date">Oct. 2026</span>
-            <span class="cert-state highlight">4.º Nacional</span>
-          </li>
-          <li class="reveal" data-reveal>
-            <div class="cert-main">
-              <h3>Linux Unhatched</h3>
-              <p>Cisco Networking Academy / UTP</p>
-            </div>
-            <span class="cert-date">Sep. 2026</span>
-            <span class="cert-state done">Completado</span>
-          </li>
-          <li class="reveal" data-reveal>
-            <div class="cert-main">
-              <h3>Cybersecurity Foundations</h3>
-              <p>Google</p>
-            </div>
-            <span class="cert-date">Ene. 2026</span>
-            <span class="cert-state done">Completado</span>
-          </li>
         </ul>
       </div>
     </section>
@@ -570,7 +612,7 @@
     <section class="section" id="contacto">
       <div class="container">
         <div class="contact-simple reveal" data-reveal>
-          <p class="section-label"><span>05</span> Contacto</p>
+          <p class="section-label"><span>06</span> Contacto</p>
           <h2>¿Trabajamos juntos?</h2>
           <p class="contact-intro">
             Estoy abierto a prácticas, posiciones junior de soporte de TI, cloud o ciberseguridad,

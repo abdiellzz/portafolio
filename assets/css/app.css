@@ -1076,6 +1076,7 @@ button { font: inherit; color: inherit; }
   line-height: 1.8;
 }
 .projects-catalog { padding-block: clamp(2rem, 5vw, 4.2rem); }
+.projects-list { display: grid; gap: 1.2rem; }
 .project-preview {
   overflow: hidden;
   border: 1px solid var(--line);
@@ -1130,14 +1131,16 @@ button { font: inherit; color: inherit; }
   padding: clamp(1.35rem, 3.4vw, 2.4rem);
 }
 .project-preview-content .section-label { margin-bottom: 0.75rem; }
-.project-preview-content h2 {
+.project-preview-content h2,
+.project-preview-content h3 {
   font-family: var(--mono);
   font-size: clamp(1.75rem, 3.6vw, 3rem);
   font-weight: 600;
   letter-spacing: -0.065em;
   line-height: 0.98;
 }
-.project-preview-content h2 span { color: var(--accent); }
+.project-preview-content h2 span,
+.project-preview-content h3 span { color: var(--accent); }
 .project-preview-subtitle {
   margin-top: 0.95rem;
   color: var(--text);
