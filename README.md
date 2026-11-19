@@ -22,7 +22,8 @@ Interfaz limpia con acentos de terminal, sin decoración innecesaria:
 
 ```
 .
-├── index.html                 # Página principal (todas las secciones)
+├── index.html                 # Página principal
+├── proyectos.html             # Página independiente de proyectos
 ├── assets/
 │   ├── css/app.css           # Estilos, terminal y responsive
 │   ├── js/main.js             # Menú, scrollspy, progreso y animaciones
@@ -41,7 +42,7 @@ Interfaz limpia con acentos de terminal, sin decoración innecesaria:
 2. **Sobre mí** — perfil, datos de contacto y descarga del CV.
 3. **Habilidades** — 9 áreas de especialidad con iconos SVG + stack de herramientas.
 4. **Experiencia** — Universidad del Istmo, AIESEC y pasantía en Institute College Panamá / CSCYT.
-5. **Proyectos** — ALLEN (IA local, 1.er lugar MIDES) y monitoreo en Kubernetes (Hackatón Copa Airlines).
+5. **Proyectos** — página independiente, lista para incorporar proyectos en detalle.
 6. **Formación** — educación, certificaciones y reconocimientos con estado.
 7. **Contacto** — enlaces directos e iconos de correo, GitHub, LinkedIn y teléfono.
 

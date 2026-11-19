@@ -873,6 +873,31 @@ button { font: inherit; color: inherit; }
 .back-top { transition: color 0.2s var(--ease); }
 .back-top:hover { color: var(--accent); }
 
+/* ---------- Página de proyectos ---------- */
+.projects-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.projects-main {
+  display: grid;
+  flex: 1;
+  place-items: center;
+  min-height: calc(100svh - 4.5rem);
+  padding: calc(var(--header-h) + 3rem) 0 3rem;
+}
+.projects-hero { width: 100%; }
+.projects-title {
+  margin: 0;
+  color: var(--text);
+  font-family: var(--mono);
+  font-size: clamp(2.5rem, 8vw, 6.5rem);
+  font-weight: 600;
+  letter-spacing: -0.07em;
+  line-height: 0.95;
+  text-align: center;
+}
+
 /* ---------- Animación de entrada ---------- */
 .reveal { transition: opacity 0.6s var(--ease), transform 0.6s var(--ease); }
 .js .reveal { opacity: 0; transform: translateY(12px); }
