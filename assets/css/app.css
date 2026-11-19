@@ -858,6 +858,77 @@ button { font: inherit; color: inherit; }
   color: var(--muted);
   margin-bottom: 0.5rem;
 }
+.subhead-spaced { margin-top: clamp(2.2rem, 5vw, 3.5rem); }
+
+.cert-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+.cert-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--panel);
+  transition: border-color 0.2s var(--ease), transform 0.2s var(--ease);
+}
+.cert-card:hover { border-color: var(--accent-line); transform: translateY(-2px); }
+.cert-card-media {
+  position: relative;
+  display: grid;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  place-items: center;
+  background: #eef1f1;
+  border-bottom: 1px solid var(--line);
+}
+.cert-card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.35s var(--ease);
+}
+.cert-card:hover .cert-card-media img { transform: scale(1.018); }
+.cert-card-open {
+  position: absolute;
+  right: 0.65rem;
+  bottom: 0.65rem;
+  padding: 0.28rem 0.5rem;
+  border: 1px solid rgba(126, 231, 135, 0.5);
+  border-radius: 4px;
+  background: rgba(11, 13, 17, 0.86);
+  color: var(--accent);
+  font-family: var(--mono);
+  font-size: 0.61rem;
+  line-height: 1.35;
+  opacity: 0.92;
+  transition: opacity 0.2s var(--ease), background 0.2s var(--ease);
+}
+.cert-card-media:hover .cert-card-open,
+.cert-card-media:focus-visible .cert-card-open { opacity: 1; background: #0b0d11; }
+.cert-card-body { padding: 1rem 1.05rem 1.1rem; }
+.cert-card-provider {
+  margin-bottom: 0.28rem;
+  color: var(--accent);
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+.cert-card h4 {
+  font-family: var(--mono);
+  font-size: 0.88rem;
+  font-weight: 500;
+  line-height: 1.48;
+}
+.cert-card-meta {
+  margin-top: 0.42rem;
+  color: var(--dim);
+  font-family: var(--mono);
+  font-size: 0.68rem;
+}
 
 .cert-list { border-top: 1px solid var(--line); }
 .cert-list li {
@@ -1527,6 +1598,7 @@ button { font: inherit; color: inherit; }
   .hero-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.9rem 1rem; }
   .hero-stats > div:nth-child(odd) { border-left: 0; padding-left: 0; }
   .area-card { padding: 1rem; }
+  .cert-gallery { grid-template-columns: 1fr; }
   .cert-list li { grid-template-columns: minmax(0, 1fr) auto; gap: 0.4rem 1rem; }
   .cert-date { display: none; }
   .footer-inner { justify-content: flex-start; }
