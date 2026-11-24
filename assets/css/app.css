@@ -408,6 +408,19 @@ button { font: inherit; color: inherit; }
   font-size: 0.88rem;
   color: var(--text);
 }
+.hero-stat-piat {
+  display: grid;
+  justify-items: center;
+  align-content: center;
+  text-align: center;
+}
+.hero-stat-piat dt,
+.hero-stat-piat dd {
+  white-space: nowrap;
+  line-height: 1.3;
+}
+.hero-stat-piat dt { margin-bottom: 0.08rem; }
+.highlight--piat figcaption { text-align: center; }
 
 /* ---------- Terminal ---------- */
 .terminal-card {
