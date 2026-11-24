@@ -440,6 +440,10 @@ button { font: inherit; color: inherit; }
   font-size: 0.58rem;
   line-height: 1.35;
 }
+.highlight--piat figcaption .highlight-partners {
+  font-size: 0.54rem;
+  letter-spacing: -0.035em;
+}
 
 /* ---------- Terminal ---------- */
 .terminal-card {
