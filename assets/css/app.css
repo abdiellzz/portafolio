@@ -938,6 +938,45 @@ button { font: inherit; color: inherit; }
 }
 .cert-card-media--portrait img { object-position: center; }
 
+/* El reconocimiento PIAT merece una lectura editorial sin desproporcionar las demás tarjetas. */
+.cert-card--featured {
+  display: grid;
+  grid-column: 1 / -1;
+  grid-template-columns: minmax(15rem, 0.92fr) minmax(0, 1.08fr);
+}
+.cert-card--featured .cert-card-media {
+  min-height: 15rem;
+  aspect-ratio: auto;
+  border-right: 1px solid var(--line);
+  border-bottom: 0;
+  background: #14171d;
+}
+.cert-card--featured .cert-card-media img {
+  object-fit: cover;
+  object-position: center;
+}
+.cert-card--featured .cert-card-body {
+  display: grid;
+  align-content: center;
+  padding: 1.15rem 1.25rem;
+}
+.cert-card--featured h4 { font-size: 0.95rem; }
+.cert-card-description {
+  margin-top: 0.68rem;
+  color: var(--muted);
+  font-size: 0.78rem;
+  line-height: 1.7;
+}
+.cert-card-link {
+  display: inline-flex;
+  width: fit-content;
+  margin-top: 0.8rem;
+  color: var(--accent);
+  font-family: var(--mono);
+  font-size: 0.66rem;
+}
+.cert-card-link:hover { color: #a0f5a8; }
+
 /* ---------- Vista previa de certificados ---------- */
 .certificate-modal {
   width: min(94vw, 72rem);
@@ -1711,6 +1750,8 @@ button { font: inherit; color: inherit; }
   .hero-stats > div:nth-child(odd) { border-left: 0; padding-left: 0; }
   .area-card { padding: 1rem; }
   .cert-gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.65rem; }
+  .cert-card--featured { grid-template-columns: minmax(11rem, 0.9fr) minmax(0, 1.1fr); }
+  .cert-card--featured .cert-card-media { min-height: 12.5rem; }
   .certificate-modal { width: min(96vw, 72rem); max-height: calc(100dvh - 1rem); }
   .certificate-modal-figure > img { max-height: calc(100dvh - 12rem); }
   .certificate-modal-caption { align-items: flex-start; flex-direction: column; gap: 0.65rem; }
@@ -1737,6 +1778,14 @@ button { font: inherit; color: inherit; }
   .brand-name { font-size: 0.82rem; }
   .info-list > div { grid-template-columns: 1fr; gap: 0.1rem; }
   .cert-list li { grid-template-columns: 1fr; }
+  .cert-card--featured { grid-template-columns: 1fr; }
+  .cert-card--featured .cert-card-media {
+    min-height: 0;
+    aspect-ratio: 16 / 9;
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .cert-card--featured .cert-card-body { padding: 1rem; }
   .cert-state { justify-self: start; }
   .guide-table th, .guide-table td { padding: 0.62rem 0.72rem; }
   .guide-table td { font-size: 0.75rem; }
